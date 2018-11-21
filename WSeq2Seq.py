@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 
 import argparse
 from arg_parser import get_parser
@@ -31,44 +31,43 @@ def sequence_embed(embed, xs):
 
 class Seq2seq(chainer.Chain):
 
-    def __init__(self, n_layers, n_source_issu_vocab,n_source_diff_vocab, n_target_vocab, n_units):
+    def __init__(self, n_layers, n_source0_vocab,n_source1_vocab, n_target_vocab, n_units):
         super(Seq2seq, self).__init__()
         with self.init_scope():
-            self.embed_x_issu = L.EmbedID(n_source_issu_vocab, n_units)
-            self.embed_x_diff = L.EmbedID(n_source_diff_vocab, n_units)
+            self.embed_x0 = L.EmbedID(n_source0_vocab, n_units)
+            self.embed_x1 = L.EmbedID(n_source1_vocab, n_units)
             self.embed_y = L.EmbedID(n_target_vocab, n_units)
-            self.encoder_issu = L.NStepLSTM(n_layers, n_units, n_units, 0.1)
-            self.encoder_diff = L.NStepLSTM(n_layers, n_units*2, n_units, 0.1)
+            self.encoder0 = L.NStepLSTM(n_layers, n_units, n_units, 0.1)
+            self.encoder1 = L.NStepLSTM(n_layers, n_units, n_units, 0.1)
 
-            self.decoder = L.NStepLSTM(n_layers, n_units, n_units, 0.1)
-            self.W = L.Linear(n_units, n_target_vocab)
+            self.decoder = L.NStepLSTM(n_layers, n_units*2, n_units*2, 0.1)
+            self.W = L.Linear(n_units*2, n_target_vocab)
 
         self.n_layers = n_layers
         self.n_units = n_units
 
-    def forward(self, xs_issu,xs_diff, ys):
-        xs = [x[::-1] for x in xs]
+    def forward(self, xs0,xs1, ys):
+        xs0 = [x[::-1] for x in xs0]
+        xs1 = [x[::-1] for x in xs1]
 
         eos = self.xp.array([EOS], numpy.int32)
         ys_in = [F.concat([eos, y], axis=0) for y in ys]
         ys_out = [F.concat([y, eos], axis=0) for y in ys]
 
         # Both xs and ys_in are lists of arrays.
-        exs_issu = sequence_embed(self.embed_x_issu, xs_issu)
-        exs_diff = sequence_embed(self.embed_x_diff, xs_diff)
+        exs0 = sequence_embed(self.embed_x0, xs0)
+        exs1 = sequence_embed(self.embed_x1, xs1)
         eys = sequence_embed(self.embed_y, ys_in)
 
-        batch = len(xs)
+        batch = len(xs1)
         # None represents a zero vector in an encoder.
-        hx0, cx0, _ = self.encoder_issu(None, None, exs_issu)
-        hx1, cx1, _ = self.encoder_diff(None, None, exs_diff)
-	
-	hx = F.concat([hx0,hx1])
-	cx = F.concat([cx0,cx1])
+        hx0, cx0, _ = self.encoder0(None, None, exs0)
+        hx1, cx1, _ = self.encoder1(None, None, exs1)
+ 
+        hx = F.concat([hx0,hx1],axis=2)
+        cx = F.concat([cx0,cx1],axis=2)
 
-
-
-	#改造　ここまで
+        #改造　ここまで
         _, _, os = self.decoder(hx, cx, eys)
 
         # It is faster to concatenate data before calculating loss
@@ -84,10 +83,11 @@ class Seq2seq(chainer.Chain):
         chainer.report({'perp': perp}, self)
         return loss
 
-    def translate(self, xs, max_length=100):
-        batch = len(xs)
+    def translate(self, xs0,xs1, max_length=100):
+        batch = len(xs0)
         with chainer.no_backprop_mode(), chainer.using_config('train', False):
-            xs = [x[::-1] for x in xs]
+            xs0 = [x[::-1] for x in xs0]
+            xs1 = [x[::-1] for x in xs1]
             exs = sequence_embed(self.embed_x, xs)
             h, c, _ = self.encoder(None, None, exs)
             ys = self.xp.full(batch, EOS, numpy.int32)
@@ -131,8 +131,8 @@ def convert(batch, device):
             batch_dev = cuda.cupy.split(concat_dev, sections)
             return batch_dev
 
-    return {'xs_issu': to_device_batch([x for x, _, _ in batch]),
-            'xs_diff': to_device_batch([x for _, x, _ in batch]),
+    return {'xs0': to_device_batch([x for x, _, _ in batch]),
+            'xs1': to_device_batch([x for _, x, _ in batch]),
             'ys': to_device_batch([y for _, _, y in batch])}
 
 
@@ -204,33 +204,33 @@ def calculate_unknown_ratio(data):
 
 
 def main():
-    parset = get_parser()
+    parser = get_parser()
     args = parser.parse_args()
 
     #load vocabulary
-    source_issu_ids = load_vocabulary(args.SOURCE_VOCAB)
-    source_diff_ids = load_vocabulary(args.SOURCE_VOCAB)
+    source0_ids = load_vocabulary(args.SOURCE_VOCAB0)
+    source1_ids = load_vocabulary(args.SOURCE_VOCAB1)
     target_ids = load_vocabulary(args.TARGET_VOCAB)
 
     # Load all records on memory.
-    train_issu_source = load_data(source_issu_ids, args.SOURCE)
-    train_diff_source = load_data(source_diff_ids, args.SOURCE)
+    train0_source = load_data(source0_ids, args.SOURCE0)
+    train1_source = load_data(source1_ids, args.SOURCE1)
     train_target = load_data(target_ids, args.TARGET)
-    assert len(train_source) == len(train_target)
+    assert len(train1_source) == len(train0_source) == len(train_target)
     
     #長さのフィルターを削除
     train_data = [
-        (s_issu,s_diff, t)
-        for s_issu,s_diff, t in six.moves.zip(train_issu_source,train_diff_source, train_target)
+        (s0,s1, t)
+        for s0,s1, t in six.moves.zip(train0_source,train1_source, train_target)
     ]
 
 
-    source_issu_words = {i: w for w, i in source_issu_ids.items()}
-    source_diff_words = {i: w for w, i in source_diff_ids.items()}
+    source0_words = {i: w for w, i in source0_ids.items()}
+    source1_words = {i: w for w, i in source1_ids.items()}
     target_words = {i: w for w, i in target_ids.items()}
 
     # Setup model
-    model = Seq2seq(args.layer, len(source_ids), len(target_ids), args.unit)
+    model = Seq2seq(args.layer, len(source0_ids),len(source1_ids), len(target_ids), args.unit)
     if args.gpu >= 0:
         chainer.backends.cuda.get_device(args.gpu).use()
         model.to_gpu(args.gpu)
@@ -254,6 +254,48 @@ def main():
          'elapsed_time']),
         trigger=(args.log_interval, 'iteration'))
 
+    if args.validation_source0 and args.validation_source1 and args.validation_target:
+        test_source0 = load_data(source0_ids, args.validation_source0)
+        test_source1 = load_data(source1_ids, args.validation_source1)
+        test_target = load_data(target_ids, args.validation_target)
+        assert len(test_source0) == len(test_target)
+        test_data = list(six.moves.zip(test_source0,test_source1, test_target))
+        test_data = [(s0,s1, t) for s0,s1, t in test_data]
+        test_source0_unknown = calculate_unknown_ratio(
+            [s for s, _, _ in test_data])
+        test_source1_unknown = calculate_unknown_ratio(
+            [s for _, s, _ in test_data])
+        test_target_unknown = calculate_unknown_ratio(
+            [t for _, _, t in test_data])
+
+        print('Validation data: %d' % len(test_data))
+        print('Validation source unknown ratio: %.2f%%' %
+              (test_source0_unknown * 100))
+        print('Validation source unknown ratio: %.2f%%' %
+              (test_source1_unknown * 100))
+        print('Validation target unknown ratio: %.2f%%' %
+              (test_target_unknown * 100))
+
+        @chainer.training.make_extension()
+        def translate(trainer):
+            source0,source1, target = test_data[numpy.random.choice(len(test_data))]
+            result = model.translate([model.xp.array(source)])[0]
+
+            source0_sentence = ' '.join([source0_words[x] for x in source0])
+            source1_sentence = ' '.join([source1_words[x] for x in source1])
+            target_sentence = ' '.join([target_words[y] for y in target])
+            result_sentence = ' '.join([target_words[y] for y in result])
+            print('# source0 : ' + source0_sentence)
+            print('# source1 : ' + source1_sentence)
+            print('# result : ' + result_sentence)
+            print('# expect : ' + target_sentence)
+
+        trainer.extend(
+            translate, trigger=(args.validation_interval, 'iteration'))
+        trainer.extend(
+            CalculateBleu(
+                model, test_data, 'validation/main/bleu', device=args.gpu),
+            trigger=(args.validation_interval, 'iteration'))
     print('start training')
     if args.resume:
         # Resume from a snapshot
