@@ -24,7 +24,10 @@ EOS = 1
 def sequence_embed(embed, xs):
     x_len = [len(x) for x in xs]
     x_section = numpy.cumsum(x_len[:-1])
-    ex = embed(F.concat(xs, axis=0))
+    try:
+        ex = embed(F.concat(xs, axis=0))
+    except:
+        print(xs)
     exs = F.split_axis(ex, x_section, 0)
     return exs
 
@@ -204,6 +207,8 @@ def calculate_unknown_ratio(data):
 
 
 def main():
+
+    chainer.set_debug(True)
     parser = get_parser()
     args = parser.parse_args()
 
@@ -254,48 +259,7 @@ def main():
          'elapsed_time']),
         trigger=(args.log_interval, 'iteration'))
 
-    if args.validation_source0 and args.validation_source1 and args.validation_target:
-        test_source0 = load_data(source0_ids, args.validation_source0)
-        test_source1 = load_data(source1_ids, args.validation_source1)
-        test_target = load_data(target_ids, args.validation_target)
-        assert len(test_source0) == len(test_target)
-        test_data = list(six.moves.zip(test_source0,test_source1, test_target))
-        test_data = [(s0,s1, t) for s0,s1, t in test_data]
-        test_source0_unknown = calculate_unknown_ratio(
-            [s for s, _, _ in test_data])
-        test_source1_unknown = calculate_unknown_ratio(
-            [s for _, s, _ in test_data])
-        test_target_unknown = calculate_unknown_ratio(
-            [t for _, _, t in test_data])
 
-        print('Validation data: %d' % len(test_data))
-        print('Validation source unknown ratio: %.2f%%' %
-              (test_source0_unknown * 100))
-        print('Validation source unknown ratio: %.2f%%' %
-              (test_source1_unknown * 100))
-        print('Validation target unknown ratio: %.2f%%' %
-              (test_target_unknown * 100))
-
-        @chainer.training.make_extension()
-        def translate(trainer):
-            source0,source1, target = test_data[numpy.random.choice(len(test_data))]
-            result = model.translate([model.xp.array(source)])[0]
-
-            source0_sentence = ' '.join([source0_words[x] for x in source0])
-            source1_sentence = ' '.join([source1_words[x] for x in source1])
-            target_sentence = ' '.join([target_words[y] for y in target])
-            result_sentence = ' '.join([target_words[y] for y in result])
-            print('# source0 : ' + source0_sentence)
-            print('# source1 : ' + source1_sentence)
-            print('# result : ' + result_sentence)
-            print('# expect : ' + target_sentence)
-
-        trainer.extend(
-            translate, trigger=(args.validation_interval, 'iteration'))
-        trainer.extend(
-            CalculateBleu(
-                model, test_data, 'validation/main/bleu', device=args.gpu),
-            trigger=(args.validation_interval, 'iteration'))
     print('start training')
     if args.resume:
         # Resume from a snapshot

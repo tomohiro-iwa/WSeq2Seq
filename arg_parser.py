@@ -1,7 +1,7 @@
 
 import argparse
 
-def get_parser:
+def get_parser():
     parser = argparse.ArgumentParser(description='Chainer example: seq2seq')
     parser.add_argument('SOURCE0', help='source sentence list')
     parser.add_argument('SOURCE1', help='source sentence list')
