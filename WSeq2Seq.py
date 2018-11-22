@@ -16,6 +16,7 @@ import chainer.links as L
 from chainer import training
 from chainer.training import extensions
 
+from chainerui.utils import save_args
 
 UNK = 0
 EOS = 1
@@ -264,6 +265,7 @@ def main():
     if args.resume:
         # Resume from a snapshot
         chainer.serializers.load_npz(args.resume, trainer)
+    save_args(args, args.out)
 
     trainer.run()
 
