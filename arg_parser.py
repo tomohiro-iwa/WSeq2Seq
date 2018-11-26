@@ -9,10 +9,18 @@ def get_parser():
     parser.add_argument('SOURCE_VOCAB0', help='source vocabulary file')
     parser.add_argument('SOURCE_VOCAB1', help='source vocabulary file')
     parser.add_argument('TARGET_VOCAB', help='target vocabulary file')
-    parser.add_argument('--validation-source',
+    parser.add_argument('--validation-source0',
+                        help='source sentence list for validation')
+    parser.add_argument('--validation-source1',
                         help='source sentence list for validation')
     parser.add_argument('--validation-target',
                         help='target sentence list for validation')
+    parser.add_argument('--test-source0',
+                        help='source sentence list for test')
+    parser.add_argument('--test-source1',
+                        help='source sentence list for test')
+    parser.add_argument('--test-target',
+                        help='target sentence list for test')
     parser.add_argument('--batchsize', '-b', type=int, default=64,
                         help='number of sentence pairs in each mini-batch')
     parser.add_argument('--epoch', '-e', type=int, default=20,
@@ -40,9 +48,12 @@ def get_parser():
                         help='maximum length of target sentence')
     parser.add_argument('--log-interval', type=int, default=200,
                         help='number of iteration to show log')
-    parser.add_argument('--validation-interval', type=int, default=4000,
+    parser.add_argument('--validation-interval', type=int, default=2000,
                         help='number of iteration to evlauate the model '
                         'with validation dataset')
+    parser.add_argument('--test-interval', type=int, default=2000,
+                        help='number of iteration to evlauate the model '
+                        'with test dataset')
     parser.add_argument('--out', '-o', default='result',
                         help='directory to output the result')
     return parser

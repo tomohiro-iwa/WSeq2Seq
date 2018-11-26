@@ -87,13 +87,20 @@ class Seq2seq(chainer.Chain):
         chainer.report({'perp': perp}, self)
         return loss
 
-    def translate(self, xs0,xs1, max_length=100):
+    def translate(self, xs0, xs1, max_length=100):
         batch = len(xs0)
         with chainer.no_backprop_mode(), chainer.using_config('train', False):
             xs0 = [x[::-1] for x in xs0]
             xs1 = [x[::-1] for x in xs1]
-            exs = sequence_embed(self.embed_x, xs)
-            h, c, _ = self.encoder(None, None, exs)
+            exs0 = sequence_embed(self.embed_x, xs0)
+            exs1 = sequence_embed(self.embed_x, xs1)
+            
+            hx0, cx0, _ = self.encoder0(None, None, exs0)
+            hx1, cx1, _ = self.encoder1(None, None, exs1)
+            
+            hx = F.concat([hx0,hx1],axis=2)
+            cx = F.concat([cx0,cx1],axis=2)
+
             ys = self.xp.full(batch, EOS, numpy.int32)
             result = []
             for i in range(max_length):
@@ -159,13 +166,15 @@ class CalculateBleu(chainer.training.Extension):
             references = []
             hypotheses = []
             for i in range(0, len(self.test_data), self.batch):
-                sources, targets = zip(*self.test_data[i:i + self.batch])
+                sources0,source1, targets = zip(*self.test_data[i:i + self.batch])
                 references.extend([[t.tolist()] for t in targets])
 
-                sources = [
-                    chainer.dataset.to_device(self.device, x) for x in sources]
+                sources0 = [
+                    chainer.dataset.to_device(self.device, x) for x in sources0]
+                sources1 = [
+                    chainer.dataset.to_device(self.device, x) for x in sources1]
                 ys = [y.tolist()
-                      for y in self.model.translate(sources, self.max_length)]
+                      for y in self.model.translate(sources0,sources1, self.max_length)]
                 hypotheses.extend(ys)
 
         bleu = bleu_score.corpus_bleu(
@@ -201,6 +210,34 @@ def load_data(vocabulary, path):
             data.append(array)
     return data
 
+def make_data_tuple(source0=(),source1=(),target=()):
+    # Load all records on memory.
+    source0_data = load_data(source0[0], source0[1])
+    source1_data = load_data(source1[0], source1[1])
+    target_data = load_data(target[0], target[1])
+    assert len(source0_data) == len(source1_data) == len(target_data)
+    
+    #長さのフィルターを削除
+    data = [
+        (s0,s1, t)
+        for s0,s1, t in six.moves.zip(source0_data,source1_data, target_data)
+    ]
+    source0_unknown = calculate_unknown_ratio(
+        [s for s, _, _ in data])
+    source1_unknown = calculate_unknown_ratio(
+        [s for _, s, _ in data])
+    target_unknown = calculate_unknown_ratio(
+        [t for _, _, t in data])
+
+    print('data len: %d' % len(data))
+    print('source0 unknown ratio: %.2f%%' %
+          (source0_unknown * 100))
+    print('source1 unknown ratio: %.2f%%' %
+          (source1_unknown * 100))
+    print('target unknown ratio: %.2f%%' %
+          (target_unknown * 100))
+    return data
+
 def calculate_unknown_ratio(data):
     unknown = sum((s == UNK).sum() for s in data)
     total = sum(s.size for s in data)
@@ -217,19 +254,15 @@ def main():
     source0_ids = load_vocabulary(args.SOURCE_VOCAB0)
     source1_ids = load_vocabulary(args.SOURCE_VOCAB1)
     target_ids = load_vocabulary(args.TARGET_VOCAB)
+    print('Source vocabulary size: %d' % len(source0_ids))
+    print('Source vocabulary size: %d' % len(source1_ids))
+    print('Target vocabulary size: %d' % len(target_ids))
 
-    # Load all records on memory.
-    train0_source = load_data(source0_ids, args.SOURCE0)
-    train1_source = load_data(source1_ids, args.SOURCE1)
-    train_target = load_data(target_ids, args.TARGET)
-    assert len(train1_source) == len(train0_source) == len(train_target)
-    
-    #長さのフィルターを削除
-    train_data = [
-        (s0,s1, t)
-        for s0,s1, t in six.moves.zip(train0_source,train1_source, train_target)
-    ]
-
+    train_data = make_data_tuple(
+        source0 = (source0_ids, args.SOURCE0),
+        source1 = (source1_ids, args.SOURCE1),
+        target = (target_ids, args.TARGET)
+    )
 
     source0_words = {i: w for w, i in source0_ids.items()}
     source1_words = {i: w for w, i in source1_ids.items()}
@@ -257,9 +290,47 @@ def main():
     trainer.extend(extensions.PrintReport(
         ['epoch', 'iteration', 'main/loss', 'validation/main/loss',
          'main/perp', 'validation/main/perp', 'validation/main/bleu',
-         'elapsed_time']),
+         'test/main/loss','elapsed_time']),
         trigger=(args.log_interval, 'iteration'))
 
+    if args.validation_source0 and args.validation_source1 and args.validation_target:
+        valid_data = make_data_tuple(
+            source0 = (source0_ids, args.validation_source0),
+            source1 = (source1_ids, args.validation_source1),
+            target = (target_ids, args.validation_target)
+        )
+
+        @chainer.training.make_extension()
+        def translate(trainer):
+            source, target = valid_data[numpy.random.choice(len(valid_data))]
+            result = model.translate([model.xp.array(source)])[0]
+
+            source0_sentence = ' '.join([source0_words[x] for x in source0])
+            source1_sentence = ' '.join([source1_words[x] for x in source1])
+            target_sentence = ' '.join([target_words[y] for y in target])
+            result_sentence = ' '.join([target_words[y] for y in result])
+            print('# source0 : ' + source0_sentence)
+            print('# source1 : ' + source1_sentence)
+            print('# result : ' + result_sentence)
+            print('# expect : ' + target_sentence)
+
+        trainer.extend(
+            translate, trigger=(args.validation_interval, 'iteration'))
+        trainer.extend(
+            CalculateBleu(
+                model, valid_data, 'validation/main/bleu', device=args.gpu),
+            trigger=(args.validation_interval, 'iteration'))
+
+    if args.test_source0 and args.test_source1 and args.test_target:
+        test_data = make_data_tuple(
+            source0 = (source0_ids, args.test_source0),
+            source1 = (source1_ids, args.test_source1),
+            target = (target_ids, args.test_target)
+        )
+        trainer.extend(
+            CalculateBleu(
+                model, test_data, 'test/main/bleu', device=args.gpu),
+            trigger=(args.test_interval, 'iteration'))
 
     print('start training')
     if args.resume:
