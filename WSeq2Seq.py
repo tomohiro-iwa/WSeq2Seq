@@ -92,14 +92,14 @@ class Seq2seq(chainer.Chain):
         with chainer.no_backprop_mode(), chainer.using_config('train', False):
             xs0 = [x[::-1] for x in xs0]
             xs1 = [x[::-1] for x in xs1]
-            exs0 = sequence_embed(self.embed_x, xs0)
-            exs1 = sequence_embed(self.embed_x, xs1)
+            exs0 = sequence_embed(self.embed_x0, xs0)
+            exs1 = sequence_embed(self.embed_x1, xs1)
             
             hx0, cx0, _ = self.encoder0(None, None, exs0)
             hx1, cx1, _ = self.encoder1(None, None, exs1)
             
-            hx = F.concat([hx0,hx1],axis=2)
-            cx = F.concat([cx0,cx1],axis=2)
+            h = F.concat([hx0,hx1],axis=2)
+            c = F.concat([cx0,cx1],axis=2)
 
             ys = self.xp.full(batch, EOS, numpy.int32)
             result = []
@@ -153,7 +153,7 @@ class CalculateBleu(chainer.training.Extension):
     priority = chainer.training.PRIORITY_WRITER
 
     def __init__(
-            self, model, test_data, key, batch=100, device=-1, max_length=100):
+            self, model, test_data, key, batch=100, device=-1, max_length=200):
         self.model = model
         self.test_data = test_data
         self.key = key
@@ -290,7 +290,7 @@ def main():
     trainer.extend(extensions.PrintReport(
         ['epoch', 'iteration', 'main/loss', 'validation/main/loss',
          'main/perp', 'validation/main/perp', 'validation/main/bleu',
-         'test/main/loss','elapsed_time']),
+         'test/main/bleu','elapsed_time']),
         trigger=(args.log_interval, 'iteration'))
 
     if args.validation_source0 and args.validation_source1 and args.validation_target:
@@ -302,8 +302,8 @@ def main():
 
         @chainer.training.make_extension()
         def translate(trainer):
-            source, target = valid_data[numpy.random.choice(len(valid_data))]
-            result = model.translate([model.xp.array(source)])[0]
+            source0, source1 , target = valid_data[numpy.random.choice(len(valid_data))]
+            result = model.translate([model.xp.array(source0)], [model.xp.array(source1)])[0]
 
             source0_sentence = ' '.join([source0_words[x] for x in source0])
             source1_sentence = ' '.join([source1_words[x] for x in source1])
