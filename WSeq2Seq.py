@@ -18,6 +18,7 @@ from chainer.training import extensions
 
 from chainerui.utils import save_args
 
+import random
 UNK = 0
 EOS = 1
 
@@ -161,12 +162,12 @@ class CalculateBleu(chainer.training.Extension):
         self.device = device
         self.max_length = max_length
 
-    def forward(self, trainer):
+    def __call__(self, trainer):
         with chainer.no_backprop_mode():
             references = []
             hypotheses = []
             for i in range(0, len(self.test_data), self.batch):
-                sources0,source1, targets = zip(*self.test_data[i:i + self.batch])
+                sources0,sources1, targets = zip(*self.test_data[i:i + self.batch])
                 references.extend([[t.tolist()] for t in targets])
 
                 sources0 = [
@@ -243,12 +244,20 @@ def calculate_unknown_ratio(data):
     total = sum(s.size for s in data)
     return unknown / total
 
+def reset_seed(seed=0):
+    random.seed(seed)
+    numpy.random.seed(seed)
+    if chainer.cuda.available:
+        chainer.cuda.cupy.random.seed(seed)
+
 
 def main():
 
     chainer.set_debug(True)
     parser = get_parser()
     args = parser.parse_args()
+
+    reset_seed(args.seed)
 
     #load vocabulary
     source0_ids = load_vocabulary(args.SOURCE_VOCAB0)
@@ -277,6 +286,7 @@ def main():
     # Setup optimizer
     optimizer = chainer.optimizers.Adam()
     optimizer.setup(model)
+    optimizer.add_hook(chainer.optimizer.WeightDecay(args.l2))
 
     # Setup iterator
     train_iter = chainer.iterators.SerialIterator(train_data, args.batchsize)
@@ -321,6 +331,11 @@ def main():
                 model, valid_data, 'validation/main/bleu', device=args.gpu),
             trigger=(args.validation_interval, 'iteration'))
 
+        dev_iter = chainer.iterators.SerialIterator(valid_data, args.batchsize, repeat=False, shuffle=False)
+        dev_eval = extensions.Evaluator(dev_iter, model, device=args.gpu, converter=convert)
+        dev_eval.name = 'valid'
+        trainer.extend(dev_eval, trigger=(args.validation_interval, 'iteration'))
+
     if args.test_source0 and args.test_source1 and args.test_target:
         test_data = make_data_tuple(
             source0 = (source0_ids, args.test_source0),
@@ -342,7 +357,8 @@ def main():
 
     if args.save:
         # Save a snapshot
-        chainer.serializers.save_npz(args.save, trainer)
+        chainer.serializers.save_npz(args.out+"/trainer.npz", trainer)
+        chainer.serializers.save_npz(args.out+"/model.npz", model)
 
 
 if __name__ == '__main__':
