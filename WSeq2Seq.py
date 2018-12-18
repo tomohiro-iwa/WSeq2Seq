@@ -41,7 +41,7 @@ class Seq2seq(chainer.Chain):
         with self.init_scope():
             self.embed_x0 = L.EmbedID(n_source0_vocab, n_units)
             self.embed_x1 = L.EmbedID(n_source1_vocab, n_units)
-            self.embed_y = L.EmbedID(n_target_vocab, n_units)
+            self.embed_y = L.EmbedID(n_target_vocab, n_units*2)
             self.encoder0 = L.NStepLSTM(n_layers, n_units, n_units, 0.1)
             self.encoder1 = L.NStepLSTM(n_layers, n_units, n_units, 0.1)
 
@@ -336,6 +336,7 @@ def main():
         dev_eval.name = 'valid'
         trainer.extend(dev_eval, trigger=(args.validation_interval, 'iteration'))
 
+
     if args.test_source0 and args.test_source1 and args.test_target:
         test_data = make_data_tuple(
             source0 = (source0_ids, args.test_source0),
@@ -346,6 +347,10 @@ def main():
             CalculateBleu(
                 model, test_data, 'test/main/bleu', device=args.gpu),
             trigger=(args.test_interval, 'iteration'))
+        test_iter = chainer.iterators.SerialIterator(test_data, args.batchsize, repeat=False, shuffle=False)
+        test_eval = extensions.Evaluator(test_iter, model, device=args.gpu, converter=convert)
+        test_eval.name = 'test'
+        trainer.extend(test_eval, trigger=(args.validation_interval, 'iteration'))
 
     print('start training')
     if args.resume:
