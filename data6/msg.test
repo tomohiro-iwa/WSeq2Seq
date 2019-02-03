@@ -1,0 +1,1000 @@
+Added `badgeColor` typing for `OptionsBottomTab` (#4245)
+Fixes sideMenu shouldStretchDrawer and animationVelocity ooptions - #4178 (#4179)
+Add example layout: FlatList (#4092)
+Expose layout in NavigationActivity (#4043)
+Adresses #3963 - stack options applied to children
+Add link to V2 Documentation (#3743)
+Detach button react view on reload (#3805)
+Official redux support (#3675)
+Fix #3450: change presentation context when SearchBar activated (#3501)
+Closes #3566
+Correct minor spelling mistake (#3556)
+Button refactor (#3532)
+Update Android Dependencies Docs (#3438)
+Closes #3418
+[BREAKING] Support RN 0.55 (#3342)
+Remove broken link in README (#3300)
+Exposed getUiImplementationProvider for people to override if needed (#3295)
+Testing new multi pr job (#3287)
+allows you to show a lightbox directly after dismissing on ios (#1466)
+Modal unmount e2e test (#3215)
+Update docs (#3196)
+Add iPad landscape launch image (#2473)
+Update import to <React/**.h> (#3098)
+Pass ActionMenuView as parent to right buttons instead of Toolbar (#3091)
+Updated RNNSideMenuController.m (#2788)
+Update doc since PR was accepted (#3020)
+Revert "fixes #2982"
+fixes #2982
+V2 custom component refactor (#2997)
+Start app (#2927)
+Modal anim (#2886)
+refactored shared element transitions (#2783)
+Document subtitle parameter for screen push (#2735)
+android sdk fix (#2712)
+fix #2616 (#2638)
+adresses #2570 (#2574)
+Stack layout android (#2531)
+Adds launch image for iPhone X and iPad to showSplashScreen. (#2321)
+Upgrade example proj to rn51 (#2452)
+Implement selected and unselected toTab color (#2429)
+added testID support in topBar and bottomTabs (#2334)
+disabled back gesture support (#2273)
+Revert "setStyle to style the according TabBar (#2224)" (#2276)
+V2 overlay (#2105)
+3D Touch Preview API (#2186)
+[V2] Fix for #1880 (#1901)
+android playground icons (#1850)
+add shouldStretchDrawer property to drawerStyle (#1817)
+add disabledButtonColor (#1842)
+add the ability to choose is relevant styles properties will remember across push or not (#1773)
+topBarBlur for ios (#1760)
+tabBarHidden for iOS (#1753)
+Update README.md (#1733)
+Renamed container lifecycle events (#1676)
+Improved Deeplink documentation (#1663)
+fix \#919
+Hide back button when calling resetTo (#1469)
+Remove depreciated createJSModules @override marker (#1628)
+Fix crash with scrollViewDidEndDecelerating and RCTTextView (#1630)
+Update top-level-api.md (Added forgotten styles) (#1600)
+Global screen visibility listener (#1575)
+Contributing guidelines & docs (#1542)
+fixed some typos in v2 docs (#1368)
+[iOS] Added fade transition animation between screens (#1367)
+changed this.props.id to this.props.containerId (#1327)
+Add compatibility with react-native link (#1245)
+Fix sample code for MainActivity.java (#1230)
+Revert "Fling collapsing react view screens (#1213)" (#1214)
+navigator.setSubTitle() support for iOS (#1167)
+Edited how to return additional packages (#1161)
+Update README.md (#1121)
+Migrate example app to RN 0.43.3 (#1111)
+Modal context menu fix (#1106)
+[Android] Support custom icon for left nav button on TitleBar    (#1013)
+Shared element transition (#994)
+Add font family support on bottom tabs (#961)
+Added 'bottomTabPressed' navigation event (#955)
+Fix import RCTBundleURLProvider.h (#938)
+Update installation-android.md (#926)
+fixed #889
+Support showing modals without animation (#900)
+#830 dismissAllModals
+Take scaled touch slop into account when calculating if screen can collapse (#799)
+Dynamic height for CollapsingReactHeader (#726)
+Register passProps with PropsRegistry during showInAppNotification for Android (#709)
+Cleanup/unmount notification overlay. (#705)
+Remove bottom tab badge when calling setTabBadge with empty object (#668)
+Fixes overlapping fab. (#620)
+Send bottomTabSelected event (#600)
+Remove Fab when when calling setButtons (#599)
+Added shields (#526)
+Screen background color android (#465)
+Fix fab (#458)
+#643 Fix flaky tests for throttling pattern
+Disable flaky tests mentioned in issue #643 and #699
+#173 Added new pattern, tests
+#176 Test run, app shutdown, minor refactoring
+#352- Unit Of Work : Make final instance variable of immutable Student class.
+#631 - Partial Response : [Refactor] Modify video model fields.
+#587 SonarQube reports bugs reader-writer-lock and refactor
+Issue #341, #281 - Consider maximum GL texture size for decoding large images
+Issue #392 - Hardcode cache dir path if Context.getCacheDir() return null
+Issue #259 - PostProcessor gives recycled bitmap Prevent recycling of cached in memory images.
+Changed API: ImageDownloader.getStream***(URI, ...) -> getStream(String, ...). Not use URI class anywhere, use String class instead. Encode urls only for network downloads. Fixed bug for file URIs with special characters (#179). Improved Scheme enum, added Java docs.
+Issue #179 - De/Encoding for File URI image load problem Handled local files with encoded symbols in file name
+Issue #93 - Problem with landscape images Fixed calculation of size the original image is needed scale to
+Issue #9 - One image cached in memory for different ImageViews Consider target ImageView size during image getting from memory cache. Now memory cache can contain different sizes of one image.
+Issue #12 - Crash on clear cache
+refactor: extract seal check into method and reuse (#1135)
+Fixes #1116 Only set readOnly/autoCommit during connection setup if they differ from defaults.
+Fixes #1060 (Really) support experimental throw-if-suspended functionality.
+Fixes #1061 HikariProxyStatement.GetGeneratedKeys does not return ProxyResultSet. (#1062)
+Added a support for SQL server's specific isolation level (Snapshot) (#1026)
+Fixes #1003 add SQL State 0A000 to eviction list.
+Fixed ClassNotFoundException when com.codahale.metrics.MetricRegistry is not in the classpath (#984)
+Mask password in JDBC URL (#905)
+Cleanup readme (#945)
+updated README.md (#903)
+Fixes #817 restore former failfast=false behavior by completely bypassing the connection validation if initializationFailTimeout is negative.
+#776 updated thread vs connection test to gather total and maxActive when there is no work to do to verify that we don't add any extra connections
+Fixed #781 Log before and after startup/shutdown.
+add a "Connect" histogram metric for tracking how many and how long connections are taking #518 and #769
+Fixes #770 by adding a new property initializationFailTimeout and deprecating initializationFailFast.  Exception path still needs some work… coming in the next commit.
+Fixes #689 log a warning if default transaction isolation level cannot be detected.
+Fixes #591 Synchronise the track statement method, and clearing of the tracked statement list.
+Issue #563 Do not start the house-keeping thread until after pool initialisation has completed.
+Fixed #401 log warning when both dataSourceClassName and jdbcUrl are specified.
+Fix #338 duplicate SQLState from cause into our SQLTimeoutException
+Fix #340 ignore exception setting read only
+Fixes #229 suppress debug log at shutdown
+Fix #258 Improve logging of closed connection reason
+Fix #252
+Fix #231 Make the copyState() method public to facilitate wrappers who want to copy/modify the configuration for use in multiple pool instances.
+Merged #216 proposed fix into isJava40Compliant()
+Fix #193 add link to maven downloads
+Fix #207 remove unneeded test utility class
+Fix #198 back out original optimisation as it masks application errors.
+Fix #181 implement pool suspend/resume for use in failover
+Special manual test for debugging issue #159
+Fix #125 add java version check around ScheduledThreadPoolExecutor.setRemoveOnCancelPolicy() for Java 6.
+Fix #115 do not call addBagItem() from housekeeping thread if minimumIdle is 0.
+Synchronize HikariCP-java6 code with HikariCP for pull request #113
+Fixed #66 mbean registration
+#21 osgi: unit tests (initial work)
+Optimize code width calculation in Code39Writer (#1103)
+Rewrite DataMatrix Detector (#1080)
+Fix QR-code hanzi segment decoder (#1033)
+Set protocol to JABBER if XMPP IM handle is found (#1007)
+Add QRCode lenient diagonal check (#906)
+Fix null pointer exception (#885)
+asterisk isn't a valid character and should not be encoded as content with Code 39. (#872)
+Update Basque translation (#696)
+Partial fix for #679: UPC/EAN min quiet zone is 9 modules for encoding
+Aztec decoder fix: return to Upper mode after U/S B/S sequence. (#643)
+Closes issue #302 : incorrectly remembers state from Intent after processing
+Issue #67 : Avoid rare AIOOBE on PDF417 misread
+Add button to flip camera (front vs rear). Fixes #6279
+A style fix following #88
+Fix #63: Use auto-value for Event classes.
+2.x: Fix Observable.flatMap to sustain concurrency level (#6283)
+2.x: Improve the Observable/Flowable cache() operators (#6275)
+Add "error handling" java docs section to from callable & co (#6193)
+2.x: explain null observer/subscriber return errors from RxJavaPlugins in detail (#6175)
+Auto-clean up RxJavaPlugins JavaDocs HTML (#6173) (#6174)
+2.x: Make observeOn not let worker.dispose() called prematurely (#6167)
+2.x: Cleaunp - rename fields to upstream and downstream (#6129)
+Initial clean up for Combining Observables docs (#6135)
+Fixed broken link under RxJS in docs/Additional-Reading.md (#6125)
+2.x: Update Readme.md about the parallel() operator (#6117)
+Add marble diagram for Single.repeatUntil operator (#6084)
+2.x: Add Completable.takeUntil(Completable) operator (#6079)
+Add marble diagrams to the Single.delay method (#6076)
+Fix links for Single class (#6066)
+Implement 'toString' method for some Emitters (#5995)
+2.x: Cleanup in the Scheduler class (#5985)
+2.x: clarify dematerialize() and terminal items/signals (#5897)
+2.x: Fix Flowable.window(Publisher|Callable) upstream handling (#5888)
+remove unnecessary comment from Observable.timeInterval(TimeUnit) (#5858)
+2.x: Improve the wording of the Maybe.fromCallable JavaDoc (#5848)
+2.x: More Observable marbles, 01/10-a (#5804)
+2.x: Upgrade to Reactive Streams 1.0.2 final (#5771)
+2.x: Subject NPE fixes, add UnicastProcessor TCK (#5760)
+2.x: RxJavaPlugins unwrapRunnable (#5734)
+correct javadoc for ConnectableFlowable, GroupedFlowable, FlowableAutoConnect (#5738)
+2.x: make parallel() a fusion-async-boundary (#5677)
+2.x: add onTerminateDetach to Single and Completable (#5624)
+2.x: Fix Observable.concatMapEager queueing of source items (#5609)
+Implement LambdaConsumerIntrospection (#5590)
+2.x: fix ReplayProcessor backpressure and NotificationLite emission bug (#5493)
+FlowableWithLatestFrom forgets request (#5494)
+2.x: Add empty source clauses to javadocs of combineLatest operators accepting unspecified number of sources. This commit resolves #5412 (#5413)
+Remove @NonNull annotation in Consumer method parameter (#5447)
+2.x: attempt to fix a few time-sensitive tests. (#5421)
+2.x: add subscribeOn overload to avoid same-pool deadlock with create (#5386)
+2.x: add tryOnError to create/XEmitter API (#5344)
+2.x: improve coverage of some classes (no functional changes) (#5310)
+Correct documented return type of Single#flatMapObservable Function argument (#5304)
+Correct java doc for refCount() return type. (#5191)
+removes all anonymous inner classes (#5177)
+2.x: improve BaseTestConsumer with awaitCount & timeout (#5155)
+2.x: fix scan(seed, f) to emit accumulated values asap (#5090)
+Removed documentation leftover (#5076)
+2.x: fix cross-boundary invalid fusion with observeOn & zip (#4984)
+Improve compose() generics (#4972)
+2.x: add subjects for Single, Maybe and Completable (#4967)
+doAfterNext - prevent post-terminal emission (#4903)
+2.x: dedicated reduce() op implementations (#4885)
+2.x: fix Flowable.concatMapEager hang due to bad request management (#4751)
+New 2.x marble diagrams (#4749)
+2.x: coverage, fixes, cleanup 10/15-1 (#4708)
+2.x: coverage, cleanup fixes 10/14-1 (#4705)
+2.x: CompositeException fix order of Exceptions (#4695)
+2.x: coverage and cleanup 10/04-1 (#4666)
+2.x: fix Mockito 2.1 changes using deprecated API of its own (#4639)
+Replace 'resource' observers with plain 'disposable' observers in tests. (#4625)
+2.x: Sync behaviour between UnicastProcessor & UnicastSubject + add a few test cases (#4601)
+2.x: add most relevant ~100 operators' Reactive-Streams TCK tests (#4538)
+2.x: Fix MaybeTimber by using scheduler and unit (#4529)
+2.x: more cleanup and fixed checker, Maybe.takeUntil (#4533)
+2.x: PublishSubject enhance NPE when onNext(null) is called (#4531)
+2.x: Adjust some JavaDoc in Emitters (#4509)
+2.x: Remove trailing whitespace (#4496)
+2.x: reduce blockingX overhead, move internal observers to common pkg (#4491)
+rename emitters #isCancelled to #isDisposed (#4490)
+2.x: Add doOnEvent to Single & Completable (#4479)
+Replace all occurrences 'TestSubscriber'  by 'TestObserver' in TestObserver class (#4478)
+2.x: coverage and fixes 9/03-2 (#4469)
+2.x: start reimplementing Maybe with up-to-date javadoc, tests and algo (#4454)
+2.x collect - handle post-terminal events properly (#4364)
+2.x: add missing ops, cleanup, fusion fixes (#4403)
+Avoid potential NPE when onError throws. (#4398)
+Add missing @Test annotation (#4358)
+Extract 'WithUpstream' interfaces. (#4326)
+Skip static factories when converting between stream types. (#4324)
+Normalize empty and never sources. (#4316)
+Rename source/publisher wrapper class to more semantic 'from' name. (#4305)
+Promote lift implementations to top-level types. (#4307)
+2.x: Observable.range fix Exception message (#4296)
+2.x: Functional interfaces now throw (#4278)
+2.x: enable scalar and async fuseable sources and intermediates (#4151)
+2.x: fix flaky tests (#4139)
+2.x: convert Observable OnSubscribe to direct implementation (#4096)
+More uses of SubscriptionHelper. (#4084)
+2.x: first step switching to the reduced-allocation architecture (#4030)
+ensure iterator.hasNext is not called unnecessarily as per #3006
+Fixes NPEs reported in ReactiveX#1702 by synchronizing queue. Adds unit test for regression.
+Make the javadoc descriptions of various Exception implementations parallel one another better (#1841)
+Fix issue #1173
+Implemented the 'DefaultIfEmpty' operator. See #34
+implemented skipWhile and skipWhileWithIndex (#80)
+Initial implementation for interval (#55). Needs a test scheduler...
+Update androidx to 1.0.0-rc02. (#524)
+#389: Update to latest snapshot of kotlinpoet
+Fix #78.
+[bugfix] fix TinkerMultidexConfigTask: FileNotFoundException(manifest_keep.txt #649 [bugfix] fix resouce This file can not be opened as a file descriptor; it is probably compressed #646 [enhancement] change tinker version to 1.9.1
+bug fix ,change filed_methods to field_methods (#450)
+DISCOVERY: Fix RollingUpgradeTests (#35375)
+ILM API ref edits (#35112)
+Move compression config to ConnectionProfile (#35357)
+Mute test for #35295
+[TEST] Cleanup FileUserPasswdStoreTests (#35329)
+Scripting: Add back lookup vars in score script (#34833)
+[ILM] rolling upgrade tests (#35328)
+Apply `ignore_throttled` also to concrete indices (#35335)
+Upgrade jline to 3.8.2 (#35288)
+[ILM] change remove-policy-from-index http method from DELETE to POST (#35268)
+Include realm type in Security Realm setting keys (#30241)
+Add dedicated step for checking shrink allocation status (#35161)
+Refactor: Remove settings from transport action CTOR (#35208)
+Use single netty event loop group for transports (#35181)
+[ILM] Fix race condition in test (#35143)
+Mute failing tests #35173
+ingest: add common options to each processor's documentation (#35091)
+SQL: Improve painless script generated from `IN` (#35055)
+[DOCS] Updates monitoring diagram (#35096)
+XPack/HLRC request/response compatibility tests (#34547)
+DISCOVERY: Cleanup AbstractDisruptionTestCase (#34808)
+rename CRUD api REST path prefix _ilm to _ilm/policy (#35056)
+median absolute deviation agg (#34482)
+Test for https://github.com/elastic/elasticsearch/issues/30054 bug (#35050)
+HLRC: DRY up remaining CRUD docs (#34925)
+NETWORK: Align Behaviour of NettyChan setSoLinger (#34870)
+[ILM] Convert Explain request to new HLRC classes (#34922)
+[Style] Remove line length violations from ingest actions (#34886)
+Fix LineLength Check Suppressions: index.fielddata (#34891)
+[TEST] HLRC: Expand failure messages in API checks (#34838)
+Lowercase static final DeprecationLogger instance names (#34887)
+document the search context is freed if the scroll is not extended (#34739)
+Add 6.6.0 version to master (#34847)
+remove index.lifecycle.skip setting (#34823)
+Logging: tests: clean up logging (#34606)
+SQL: Fix edge case: `<field> IN (null)` (#34802)
+ingest: document fields that support templating (#34536)
+TESTING.asciidoc fix examples using forbidden annotation (#34515)
+Enable docs tests to have tear down snippet (#34716)
+Migrate wait for pending tasks helper to server (#34675)
+HLRC: ML %s/Boolean is/Boolean get/g (#34641)
+SQL: Introduce support for NULL values (#34573)
+[Docs] Add _cache/clear parameter examples (#34614)
+Amazon: Wrap at 140 columns (#34495)
+Rename and deprecated `prefix` logfile audit setting names (#34475)
+Replace Streamable w/ Writeable in RoleDescriptor (#34544)
+Disc: Move AbstractDisruptionTC to filebased D. (#34461)
+Introduce index settings version (#34429)
+SCRIPTING: Move Aggregation Script Context to its own class (#33820)
+ListenableFuture should preserve ThreadContext (#34394)
+[CCR] Change unfollow API's privilege scheme. (#34175)
+[DOCS] Removes beta label from composite aggregation (#34329)
+Docs: DRY up CRUD docs (#34203)
+Small fixes to the HLRC watcher documentation. (#34306)
+Add support for 'ack watch' to the HLRC. (#33962)
+Adds trace logging to IndicesRequestCache (#34180)
+Fix logging of cluster state update descriptions (#34182)
+Fix use of hostname in Windows service (#34193)
+[Docs] Updated link to kafka-elasticsearch-consumer project (#34234)
+Add Gradle attributes to CI jobs (#34178)
+Change CCR stats endpoint to be index-centric (#34169)
+[Docs] remove double words (#34138)
+Handle null SSLSessions during invalidation (#34130)
+Rename CCR APIs (#34027)
+Logging: Drop Settings from security logger get calls (#33940)
+ingest: correctly measure chained pipeline stats (#33912)
+XContentBuilder to handle BigInteger and BigDecimal (#32888)
+INGEST: Tests for Drop Processor (#33430)
+SQL: Prevent StackOverflowError when parsing large statements (#33902)
+[DOCS] Clarify 'type' parameter meaning for custom analyzer (#34012)
+Add a deprecation warning in the type query documentation. (#34017)
+[DOCS] Removed Homebrew installation section (#34011)
+Adjust bwc for recovery request (#33693)
+Track max seq_no of updates or deletes on primary (#33842)
+HLRC: ML start data feed API (#33898)
+Add OneStatementPerLineCheck to Checkstyle rules (#33682)
+Introduce a `search_throttled` threadpool (#33732)
+Core: Default node.name to the hostname (#33677)
+Delete custom index if the only contained job is deleted (#33788)
+[Tests] Nudge wait time in RemoteClusterServiceTests (#33853)
+Fixing assertions in integration test (#33833)
+HLRC: Delete ML calendar (#33775)
+TESTS: Set SO_LINGER = 0 for MockNioTransport (#32560)
+MINOR: Remove Some Dead Code in Scripting (#33800)
+Watcher: Use Bulkprocessor in HistoryStore/TriggeredWatchStore (#32490)
+Dependencies: Update javax.mail in watcher to 1.6.2 (#33664)
+Corrected aggregation name to match the example (#33786)
+TESTS: Fix Concurent Remote Connection Updates (#33707)
+Keep CCR REST API specification with all of X-Pack (#33743)
+Expose retries for CCR fetch failures (#33694)
+[ML] Allow overrides for some file structure detection decisions (#33630)
+[TESTS] Disable specific locales for RestrictedTrustManagerTest (#33299)
+Resync fails to notify on unavaiable exceptions (#33615)
+Add migration note for remote cluster settings (#33632)
+Enable global checkpoint listeners to timeout (#33620)
+Forbid negative `weight` in Function Score Query (#33390)
+Preserve cluster settings on full restart tests (#33590)
+Renames lifecycle to policy in rest-api-spec (#33507)
+Add predicate_token_filter (#33431)
+[Test] Remove duplicate method in TestShardRouting (#32815)
+[CCR] Delay auto follow license check (#33557)
+Add infrastructure to upgrade settings (#33536)
+move ILM client objects from protocol to client (#33532)
+Logging: Configure the node name when we have it (#32983)
+Upgrade to a Lucene 8 snapshot (#33310)
+Introduce private settings (#33327)
+TESTS+DISTR.: Fix testIndexCheckOnStartup Flake (#33349)
+Fix extractjar task  ci  (#33272)
+Fixes SecurityIntegTestCase so it always adds at least one alias (#33296)
+[CCR] Removed custom follow and unfollow api's reponse classes with AcknowledgedResponse (#33260)
+Lazy evaluate java9home (#33301)
+MINOR: Remove Dead Code from PathTrie (#33280)
+TEST: Access cluster state directly in assertSeqNos (#33277)
+HLRC: add client side RefreshPolicy (#33209)
+HLRC: Add Lifecycle Policy delete to the HLRC (#33142)
+Fix forbidden apis on FIPS (#33202)
+INGEST: Add Pipeline Processor (#32473)
+HLRC: create base timed request class (#33216)
+HLREST: add reindex API (#32679)
+Fix ShardFollowNodeTask.Status equals and hash code (#33189)
+APM server monitoring (#32515)
+TEST: resync operation on replica should acquire shard permit (#33103)
+Make CCR QA tests build again (#33113)
+Remove unsupported Version.V_5_* (#32937)
+[Rollup] Return empty response when aggs are missing (#32796)
+Fixes shrink action to remove single ndoe allocation (#33091)
+Allow engine to recover from translog upto a seqno (#33032)
+move ESLoggerFactory usage to LogManager (#33043)
+Build: Rework shadow plugin configuration (#32409)
+[ML] Allowing _close to accept body payloads for options (#32989) (#33000)
+HLRC: ML Close Job (#32943)
+ Use settings from the context in BootstrapChecks (#32908)
+[DOCS] Splits the users API documentation into multiple pages (#32825)
+For filters aggs, make sure that rewrites preserve other_bucket. (#32921)
+migrate allocate action pojo/xcontent to xpack.protocol (#32853)
+HLRC: adding machine learning delete job (#32820)
+Remove passphrase support from reload settings API (#32889)
+[DOCS] Clarify sentence in network-host.asciidoc (#32429)
+HLRC: adding machine learning open job (#32860)
+Use generic AcknowledgedResponse instead of extended classes (#32859)
+[TEST] Force a stop to save rollup state before continuing (#32787)
+HLRC: migration get assistance API (#32744)
+mute test #32737
+Core: Fix Java Time DateFormatter printers (#32592)
+Use nio driven http client for testing (#32621)
+Make sure that field collapsing supports field aliases. (#32648)
+serialize suggestion responses as named writeables (#30284)
+[Rollup] Remove builders from GroupConfig (#32614)
+[TEST] Allow to run in FIPS JVM (#32607)
+Fix race between replica reset and primary promotion (#32442)
+Add @AwaitsFix for #32554
+Add licensing enforcement for FIPS mode (#32437)
+Scripting: Fix painless compiler loader to know about context classes (#32385)
+Increase max chunk size to 256Mb for repo-azure (#32101)
+stop throwing an IllegalStateException for unrecognized steps (#32212)
+Fix AutoIntervalDateHistogram.testReduce random failures (#32301)
+Make get all app privs requires "*" permission (#32460)
+Switch security spi example to new style Requests (#32341)
+Removes redundent NORELEASES and ObjectParserUtils (#32427)
+TESTS: Move netty leak detection to paranoid level (#32354)
+Painless: Clean Up PainlessClass Variables (#32380)
+Security: revert to old way of merging automata (#32254)
+Introduce fips_mode setting and associated checks (#32326)
+Allow Integ Tests to run in a FIPS-140 JVM (#31989)
+Fix a test bug around nested aggregations and field aliases. (#32287)
+[test] package pre-install java check (#32259)
+Fail shard if IndexShard#storeStats runs into an IOException (#32241)
+INGEST: Make a few Processors callable by Painless (#32170)
+Make sure that field aliases count towards the total fields limit. (#32222)
+Switch rolling restart to new style Requests (#32147)
+Fix multi level nested sort (#32204)
+Ensure that field aliases cannot be used in multi-fields. (#32219)
+Handle missing values in painless (#32207)
+Detect and prevent configuration that triggers a Gradle bug (#31912)
+[test] port linux package packaging tests (#31943)
+Add more contexts to painless execute api (#30511)
+A replica can be promoted and started in one cluster state update (#32042)
+[DOCS] Update TLS on Docker for 6.3 (#32114)
+[ML] Move analyzer dependencies out of categorization config (#32123)
+Fix put mappings java API documentation (#31955)
+DOCS: put LIMIT 10 to the SQL query (#32065)
+[Rollup] Replace RollupIT with a ESRestTestCase version (#31977)
+Correct spelling of AnalysisPlugin#requriesAnalysisSettings (#32025)
+Convert Version to Java - clusterformation part1 (#32009)
+Add Expected Reciprocal Rank metric (#31891)
+SQL: Support for escape sequences (#31884)
+ingest: date_index_name processor template resolution (#31841)
+[X-Pack] Beats centralized management: security role + licensing (#30520)
+Painless: Restructure Definition/Whitelist (#31879)
+Check timeZone() argument in AbstractSqlQueryRequest (#31822)
+Fix profiling of ordered terms aggs (#31814)
+Do not return all indices if a specific alias is requested via get aliases api. (#29538)
+Get snapshot rest client cleanups (#31740)
+Test: Do not remove xpack templates when cleaning (#31642)
+[ML] Limit ML filter items to 10K (#31731)
+[DOCS] Add missing get mappings docs to HLRC (#31765)
+DOC: Add examples to the SQL docs (#31633)
+Implemented XContent serialisation for GetIndexResponse (#31675)
+[DOCS] Check for Windows and *nix file paths (#31648)
+[ML] Validate ML filter_id (#31535)
+Fix syntax errors in get-snapshots docs (#31656)
+Docs: Fix description of percentile ranks example example (#31652)
+Correct integTest enable logic (#31646)
+Upgrade gradle wrapper to 4.8 (#31525)
+Add support for switching distribution for all integration tests (#30874)
+QA: Create xpack yaml features (#31403)
+Close xcontent parsers (partial) (#31513)
+TEST: Correct the assertion arguments order (#31540)
+[DOCS] Move sql to docs (#31474)
+Core: Combine doExecute methods in TransportAction (#31517)
+Adds an API to remove ILM from an index completely (#31358)
+Docs: Add ccr to the cat thread pool doc test (#31442)
+Docs: Advice for reindexing many indices (#31279)
+Make release notes ignore the `>test-failure` label. (#31309)
+Docs: Use the default distribution to test docs (#31251)
+Expose lucene's RemoveDuplicatesTokenFilter (#31275)
+SQL: Fix rest endpoint names in node stats (#31371)
+Rankeval: Fold template test project into main module (#31203)
+[Docs] Remove reference to repository-s3 plugin creating an S3 bucket (#31359)
+Describe how to add a plugin in Dockerfile (#31340)
+Test: Remove broken yml test feature (#31255)
+Set analyzer version in PreBuiltAnalyzerProviderFactory (#31202)
+Modify pipelining handlers to require full requests (#31280)
+Use armored input stream for reading public key (#31229)
+REST hl client: adjust wait_for_active_shards param in cluster health (#31266)
+REST high-level Client: remove deprecated API methods (#31200)
+SyncedFlushResponse to implement ToXContentObject (#31155)
+Remove some line length supressions (#31209)
+Move ESIndexLevelReplicationTestCase to test framework (#31243)
+Move default location of dependencies report (#31228)
+[DOCS] Added 'fail_on_unsupported_field' param to MLT. Closes #28008 (#31160)
+Remove extraneous references to 'tokenized' in the mapper code. (#31010)
+Add support for ignore_unmapped to geo sort (#31153)
+Use a `_recovery_source` if source is omitted or modified (#31106)
+Pass main class by environment variable on Windows (#31156)
+[DOCS] Moves X-Pack setup to docs (#31145)
+Add check for feature aware implementations (#31081)
+Replace exact numDocs by soft-del count in SegmentInfo (#31086)
+Change ObjectParser exception (#31030)
+Transport client: Don't validate node in handshake (#30737)
+Enabling testing against an external cluster (#30885)
+[docs] explainer for java packaging tests (#30825)
+Update and reorganise copy data sets methods (Fix for #1604).
+Fix issue #2102
+Fix #2119
+Create new XYMarkerView (#2029)
+Fixes related to legend rendering (issue #1969)
+Merge #1947
+Eliminate allocs - Buffer Paint.FontMetrics (#1892)
+Merge #1878
+Fixes related to no data text #1749
+Fix issue #1862
+Fix issue #1550
+Fix issue regarding corrupted translation (issue #1551)
+Fix issue #1401
+Did some fixing related to #1381, added more useful methods to interfaces.
+Fixes #1258
+Fix #1066
+Fix #931.
+Added markerview support for HorizontalBarChart (#1010) - still bugfixing needed.
+Fixed issue concerning grouped-barchart (issue danielgindi/ios-charts#242)
+Added outofbounds check in getEntryForHighlight (#898)
+Fixed issue concerning drawbitmap (issue #554).
+Fixed bug concerning cubic-lines (issue #528).
+Fixed issue concerning PieChart center text (issue #467).
+Fixed issue #255 and #258.
+Fixed issue concerning PieChart crashing when tapped empty (issue #134).
+Fixed issue #46 concerning LineDataSet filling.
+Fixed issue #45 concerning LineDataSet filling.
+:sparkles: Introducing new features. #107
+random Aeron streamId for shared environment (#6673)
+DL4J Issues/Fixes (#6634)
+encodeBitmap fix for v100 sync (#6638)
+Spark fixes + improvements (#6604)
+Upgrade spring version (#6600)
+Test fixes + YOLO2 validation usability improvement (#6597)
+allow multi-out multi-in (#6575)
+Revert "Gaussian distribution fix" (#6566)
+Gaussian distribution fix (#6564)
+Always use US Locale when formatting numbers with NDArrayStrings (#6537)
+Add support for TensorFlow SavedModel to GraphRunner (#6522)
+More Misc DL4J/ND4J Fixes (#6510)
+basic tests (#6523)
+[WIP] spark fault tolerance (#6455)
+pydatavec release prep (#6427)
+rem datavec uberjar (#6360)
+Shyrma split space (#6318)
+Arbiter dropout fixes (#6265)
+[WIP] Ongoing updates to docs (#6170)
+correct scatter ops for case when indexes is scalar and updates is vector (#6167)
+DL4J: Javadoc pass (#6129)
+Fix copyright headers for nd4j and deeplearning4j-dataimport-solrj (#6092)
+DataVec: add CSVMultiSequenceRecordReader (#6091)
+Arbiter enhancements (#6089)
+implementation for #6079 (#6080)
+Fix build due to recent API change (#6013)
+Missing advanced activations and Keras support (#5965)
+Shyrma prelu2 (#5969)
+update keras docs (#5890)
+Update version of OpenBLAS to 0.3.2.dev (#5887)
+Few more fixes (#5872)
+[WIP] Import inception v4 (#5842)
+Add RecordConverter.toRecord(Schema, List<Object>) (#5849)
+range fix for Serhii (#5846)
+closes #5831 (#5833)
+Don't prevent download of dictionary files if directory is empty. (#5811)
+Few CUDA fixes (#5805)
+Even more javadoc (#5801)
+[WIP] SameDiff Javadoc (#5788)
+Change how empty text is positioned for file/folder choosers. Resolves #1614.
+Fix dialog titlle getting cut off when icon is visible in certain cases. Resolves #1600.
+Resolve #1573, fixes dialog callbacks (show/cancel/dismiss) not working due to a simple logical error.
+Input filters builder support, resolves #1480
+Fix #1424
+Resolved #1204
+Resolved #1104
+0.8.5.6. Resolves #971.
+A small change for #941
+Fixed #559
+Using password inputType for input dialogs should now work correctly, resolves #461
+Release 0.6.5.2. Fixed #361. Also fixed MaterialListPreference and some other list dialog logic.
+Fixed #362, fixed #363
+Fixed #331
+Signal the VertxMetrics when the Vertx instance is initialised - fixes #2695
+Callback improvements - fixes #2657 (#2675)
+Add Vert.x Logger isWarnEnabled() method - fixes #2628
+Fix FileResolver for OSGi bundle resources (#2549)
+Dns client recursion desired - fixes #2441 (#2455)
+Use a stack-less TimeoutException when timing out an HttpClientRequest - fixes #2419
+Don't capture stack trace for exception for connection close events - fixes #358
+Implement properly h2c upgrade - fixes #2362
+The http server request exception handler should observe the response as closed on a close event - fixes #2377
+Http1xOrH2CHandler should remove itself before firing the buffer - fixes #2375
+Use plain asciidoc file instead of package-info file - fixes #2329
+SLF4J location aware logger parameters are ignored - fixes #2130
+HttpClient redirection fixes - fixes #2307 - fixes #2304
+Improve default dns client configuration - fixes #2303
+The WebSocket should check there is a handler for pong before delivering the pong event - fixes #2255
+Remove workaround for #2212
+issues #2141: use fakedns to avoid resolving unknown.hostname the test would fail if the provider's dns returns a adserver as unknown hostname
+Fixes #2155 JsonParser fails to handle floating point numbers in buffering mode
+Expose the selected sub protocol negotiated by the websocket client and server - fixes #2142
+Fixes #1952 Deploy verticles with a class object
+Fixes #1486 Allow AsyncFile's to be opened in append mode
+WorkerExecutor should use the right executor when the context queue is not empty - fixes #2046
+fixes #1752: DNSclient.lookup4 does not return the ip address when a CNAME is used
+Reverts #1824 and instead ddd tryComplete/tryFail methods that allow to complete/fail Future if not yet completed - fixes #1835
+Remove deprecated AsyncResultHandler and VoidHandler - fixes #1803
+Update boring SSL dependency to 1.1.33.Fork24 - fixes #1736
+Support local address for TCP clients - fixes #1569
+Fixes #1573 Blocked thread warning when opening or closing an AsyncFile
+Multivalued server cookies should be seen as a single semi colon separated header - fixes #1506
+Fix message producer #1382
+Address comments from #1320:
+fixes vert-x3/issues#129
+rebase to @cescoffier fix for #1415
+Fix for issue#1411
+Fix #1345 and a couple of other tests failing on Windows.
+Add a `actualPort` method in HTTPServer to retrieve the listened port when set to 0. It fixes #1318
+Fix link #20
+Fix #194
+Changed Animated Scroll to use Overshoot. Thanks to yongsheng for the pull in #83
+Merge for Pull #71
+Added method to set all three scale levels at once, Closes #170
+Added onScaleChangeListener, set interface method and implementation, Closes #173
+Enable to set custom OnDoubleTapListener, closes #97
+ADT support #76
+Remove unnecessary Lint Marker. Fixes #17
+Expand Sample app. Fixes #2
+bug fixed for WriteBigDecimalAsPlain, for issue #1982
+add testcase for #1763
+jsonpath support length. for issue #1651
+jsonpath support length. for issue #1651
+bug fixed for issue #1613
+refactor for patch #1517
+add testcase for issue #1445
+improved support kotlin data class. #1374
+add testcase for issue #1370
+for issue #1343
+improved JSONType.seeAlso enum support. for issue #1319
+fixed #1306 and add 2 testcases for #1306 #1307
+add testcase for issue #1205
+add toJSON format support. issue #978
+jdk8 LocalDateTime support SerializerFeature.UseISO8601DateFormat. issue #952
+fix #943
+add testcase for issue #798
+bug fixed for issue #771
+fix #578 #577 and #574
+fix #1 #10
+Add Disruptor.setDefaultExceptionHandler API that changes the exception handler for all event processors and worker pools created by Disruptor regardless of whether they were created before or after the call to setDefaultExceptionHandler. This fixes #122
+Fix #84, allow polling while ring buffer is full.
+Fixes #56, errors when generating javadoc with JDK8
+Close #1055 - Use lambda expressions
+Fixed #995
+Fixed #928
+Fix vector drawables in xml (#296)
+Close #1
+Added Vibration support (Fixes #9). Added API level 10+ support (Fixes #4).
+Fixed issue #811 :can't define overload functions in hystrix-clj.
+Reject requests after servlet shutdown (fixes #786)
+This fixes #692. If ratePerSecond is NaN, set errorThenVolume to -1
+Fix #1190
+Fix ByteArrayDataInput javadoc (GitHub pull request #1874). ------------- Created by MOE: http://code.google.com/p/moe-java MOE_MIGRATED_REVID=79122254
+Remove Eclipse-based compiler error "The method set(int, Optional<V>) in the type List<Optional<V>> is not applicable for the arguments (int, Optional<capture#66-of ? extends V>"
+Add dynamic concatenating media source. (GitHub issue #1706)
+Process only type == 0 captions. #156
+Add EIA-608 (CEA-608) Closed Captioning support for HLS #68
+* adjust `BadgeStyle` to allow providing a `ColorStateList` which is used if no `mTextColor` is available   * **hopefully** FIX #2348
+* add `tag` to IDrawerImageLoader and AbstractDrawerImageLoader to allow differentiation inside the loading logic  * Perhaps FIX #1489
+* improve LTR behavior of the `AccountHeader` if used with some LTR text  * Probably FIX #1291
+* if we have disabled to show the `ProfileImages` inside the AccountHeaderBuilder we also don't show it in the MiniDrawer  * FIX #1207
+* update to latest Materialize v0.8.7 to FIX #1146
+* fix item specific onClickListener was not called (FIX #1016)
+* set typeface for SectionDrawerItem FIX #129
+* allow to handle all uris inside the DrawerImageLoader FIX #854
+* add new PersistentDrawerActivity to showcase how to create a more complex drawer with modified behavior without altering the MaterialDrawer API  * This sample showcases how to create a persistent drawer like shown in the Material Design Guidelines   * https://material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0Bx4BSt6jniD7YVdKQlF3TEo2S3M/patterns_navdrawer_behavior_persistent2.png   * https://www.google.com/design/spec/patterns/navigation-drawer.html#navigation-drawer-behavior FIX #713
+* fix wrong reselection of the drawerItem when scrolling FIX #655
+* fix wrong selectedTextColor of badge FIX #627
+* remove setting the padding for the stickyFooterItems FIX #463
+* prevent another IndexOutOfBounds exception FIX #447
+* fix possible IndexOutOfBoundsException FIX #447
+* add helper to create sticky footer items FIX #133
+* Add method to all drawerItems to set the typeface FIX #129
+* add new PrimaryDrawerItem with Description FIX #125
+* set Drawer background as image FIX #117
+* add paddingBottom to divider to be Android Design Guideline Conform FIX #30
+fix #16 , add a new class YoYoRope
+fix: update dx to version 16 (#369)
+fix: change resource fields generations in R class (#308)
+deobf: prevents overlaping of class names and packages (#335)
+core: fix inline of anonymous obfuscated class (#122)
+core: fix class name checker execution after deobfuscator (#286)
+core: fix synthetic constructor remove (#265)
+core: fix variable names propagation (#219)
+res: close tag before cdata (#231)
+core: fix exit node search for synchronized block (fix #72)
+core: fix 'break' in complex 'if' in loop (fix #67)
+core: don't insert break in method exit blocks (fix #60)
+core: update android files to 5.1 (fix #58)
+core: check arguments for field arithmetic operations (fix #40)
+core: fix constructor call for moved arg (fix #20)
+fix #1404
+rm #1135
+fixbug #954
+fix #862
+fix #649 (add setHeaderView)
+fix #641
+fix bug #293
+Fix bug #287: fail to expand item when adapter has HeaderView
+fix #64
+Fix R scanner behavior for array values (#1250)
+Update Gradle to 3.5 (#948)
+Support left/right clicking on the circle view to control paging. Closes #2.
+Support loading resources from dynamic modules (#3308)
+Add Android X support to the annotation processor. (#3139)
+Updated documentation (#2936)
+Update Gradle wrapper to 4.6 (#2935)
+Add nullability annotations to signature package and its dependencies (#2748)
+Add a test for issue #2638.
+Fix typos in README.md (#2191)
+Forward port PR #1090: Fix thread-unsafe behaviours in GifDecoder
+Remove leftover lines for #888
+Fix that swipe down (over-scroll) causes item click. #38
+Move the TouchInterceptionFrameLayout to the library. #25
+Add "Apps that uses this library" section in README. (Related to the issue #31)
+Adding test for OverrideTabSelection and renamed the listener (#706)
+The cancel event will be send once the position is moved, so pass the event to children when press down, fix #93, fix #102; Also fix #63
+fix #52
+Add support for setting a custom User-Agent (#6270)
+Update CHANGELOG.md (#6245)
+Bump ReLinker to 1.3.0 (#6156)
+Move creating a SyncConfiguration to SyncUser (#5975)
+Permissions fixes (#5879)
+Expose the per-user private role (#5858)
+Fix findFirst with sorting (#5848)
+Disable Realm.delete* when using partial sync (#5782)
+Fixes #5677 (#5741)
+Support for overriding internal names using annotations (#5280)
+Release SNAPSHOTs from next-major (#5706)
+Remove getFieldNames from proxy classes (#5700)
+Nh/ros test tiemout (#5689)
+Fix typo (#5569)
+Process safe deleteRealm and assetFile (#5417)
+Expose SyncSessionStopPolicy in SyncConfiguration (#5356)
+Use NPM to install integration test server (#5249)
+Keep SharedRealm's inner classes (#5212)
+@NotNull as alias for @Required (#5161)
+Update reference URL of Client Error (#5137)
+refactor CachedFieldDescriptor#compileFieldDescription() and DynamicFieldDescriptor#compileFieldDescription() (#5090)
+Fix Javadoc (#5026)
+Fix merge conflict resulting in duplicate error code (#4915)
+Allow multiple tasks to run after test is complete. (#4833)
+BLOB's default value when convert to not-nullable (#4794)
+Enable encryption with Sync (#4746)
+Factor out ManagedObject Interface (#4715)
+Update grade wrappers and android gradle plugin (#4646)
+    Wait for async tasks finish to solve flaky test (#4603)
+update butterknife to 8.5.1 (#4587)
+Add support for changing a users password. (#4538)
+Update realm sync to 1.6.0 (#4523)
+Added support for SyncUser.isAdmin() (#4427)
+Work around the memmove bug on Samsung device (#4402)
+Enable distinct on unindexed fields (#4390)
+Cancel transaction explicitly (#4319)
+Correctly report Client Reset (#4313)
+Proper RealmMigrationNeededException is now thrown. (#4304)
+Fixed a bug that the classes were replaced with a class in Gradle's classpath (#4127)
+Expose schemaVersion in SyncConfig (#4058)
+Print the path when get File::AccessError (#4068)
+Add multiple users support to UserStore (#4056)
+RAII wrapper for some JNI resources (#3959)
+added changelog for #3785 (#3797)
+fix a bug that realm-snnotations-processor is not deployed to ojo (#3778)
+Enable lcache on CI (#3717)
+Download core from public location. Upgrade to latest sync beta. (#3531)
+Accelerate build with ccache and lcache (#3523)
+Upgrade to Core 2.0.0 (#3494)
+Upgraded to 37.2 (#169)
+Upgrade to latest core+sync release (#167)
+Moving logging to a stage where response has been parsed (#158)
+Unit tests for SyncConfiguration (#155)
+add default value instruction support (#3462)
+Make Sync API take advantage of global init (#115)
+add a task to clean jni header files when .so file is cleaned (#3450)
+Move JNI build to cmake (#2960)
+improve `Table` and schema cache. (#3315)
+Add RealmQuery.in() (#3133)
+Add section about examples. (#3263)
+Remove unused mixed type (#3041)
+update realm logo (#2924)
+addPrimaryKey() on RealmObjectSchema misses Index addition. (#2832)
+Nh/fix listener generics (#2726)
+Better exception message when using custom migrations (#2715)
+APT is now correctly applied for unit tests in library projects. (#2693)
+Add bullet to changelog about behavior change of RealmList.first() and RealmList.last() (#2683)
+RealmCollection iterators are now stable (#2124)
+aAInitial dataset for a Realm (#2602)
+Fix warnings in AdapterExample (#2580)
+Checking to see if a transaction is currently in progress for sync and async transaction pathways. Also adding logging. Added a test helper to assist with log assertion. Fixes #1682
+Update GitHub Issue Templates (#2222)
+Check-health for Kafka Collector (#2168)
+Moves server packages into zipkin2 to simplify logging (#2134)
+Skip filtering traces from result when STRICT_TRACE_ID is set to true (#1973)
+Prevents overlapping calls to health check (#1919)
+Updates MySQL header copyright date. (#1910)
+Fixes bad partitioning of data in the v1 memory store (#1843)
+Pretties cassandra3 toString and backfills tests (#1797)
+Use upstream Prometheus client and Spring integration (#1609)
+Adds v2 StorageComponent and allows the server to use it directly (#1729)
+WIP v2 http query api (#1710)
+Organizes v2 classes into corresponding internal packages (#1702)
+Accepts Zipkin v2 Span format in all current transports (#1684)
+Fixes bug where Span.Builder.duration wasn't cleared (#1659)
+Fix UI code to reference api under base path /zipkin (#1649)
+Refactors in-memory storage so that there's a common type across data sets (#1636)
+Allow query-only servers to disable the HTTP collector (#1615)
+Corrects search results to display total spans as "NN Spans" (#1550)
+Flags yellow for annotations that match case insensitive error (#1475)
+Adds release instructions for next year (#1466)
+Dependency version bumps (#1454)
+Add documentation on the logsUrl feature and delete specific environment variable. (#1423)
+Use default withSSL() settings for cassandra (#1401)
+Removed fixed top nav bar. (#1398)
+Create bundle for zipkin core (#1386)
+Serializes I64 numbers greater than 53bits as strings in json (#1373)
+Writes Span.traceIdHigh last so that it is exactly the same as libthrift (#1359)
+Documents why core annotations are not shown in the UI (#1291)
+Lowers scope of Elasticsearch to code used in prod (#1295)
+[zipkin-ui] Fix install-node-and-npm (#1246)
+Moves zipkin-core language level to JRE 6 (#1245)
+Adds error-prone checks to the build (#1166)
+Replaces hand-written query logging with DataStax QueryLogger (#1156)
+Fix #215: directly use version from release tag
+Revert "Merge pull request #208 from ThomasRooney/master"
+Closing #494, Closing #484
+Added RangeFileAsyncHttpResponseHandler, #423
+Merged manually, Closing #476
+Manually merged, Closing #468
+Manually merged, Closing #471
+Throwing malformed URL fixes #115, Throwing Interrupted exception fixes #323
+Fixes #253
+Fixed 2d34e1ca3b341356463adae08334d9bb31277b24 leftover, Closes #86
+Fixes #206
+Fixes #121
+Fixes #77
+Proper support for GIFs when using a RetainingDataSource (#2185)
+Add support for windows ico image format (#2189)
+Fix for #912 Not able to set hotspot on "overlayImage" drawable set i…
+V3.0 (#623)
+Merge "Binding on-demand #10: Remove permanent binding and add registration"
+Binding on-demand #10: Remove permanent binding and add registration
+Binding on-demand #7: PerformInitializeTask usage
+Merge "Binding on-demand #4: PerformClearTask usage"
+Binding on-demand #3: updateTransportAttributes() API
+Add generateGettersSetters flag to Entity annotation. #358
+fix for LazyList.sublist (fixes #146)
+throw if interface defined more than once (fixes #87)
+AbstractRegistryFactory Unit Test: destroyAll method (#2581)
+[Dubbo-2348 ] AbstractRegistry util test enhancement (#2409)
+replace Random with ThreadLocalRandom (#2433)
+New ascii logo. (#2395)
+Changed parent pom to Dubbo root (#2333)
+upgrade netty for dubbo-all (#2123)
+* Improve AsyncContext docs (#2101)
+fix unit test failure (#2097)
+[dubbo-1929]: remove the verison property that is no use (#1929) (#2078)
+rename access log in unit test from 'alibaba' to 'alibaba.log' so that it cannot be committed by accident. (#2051)
+[Dubbo-1691] Add unit tests for MulticastRegister #1691 (#1738)
+Remove unnecessary null check. (#1764)
+Fix isShutdown() always return true (#1426)
+optimize unit test for serialization hession2/jdk/kryo (#1726)
+add javadoc for setAttachments in order to clarify issue#1166
+[Dubbo-1284] Fix UT warning message when running on Java 9 (#1323)
+Fixes #1289, use bind_port as mapping key
+Fixed #893, remove null check in CacheFilter.
+MINOR: Fix a few blocking calls in PlaintextConsumerTest (#5859)
+KAFKA-7524: Recommend Scala 2.12 and use it for development (#5530)
+MINOR: Bump timeout for sending records (#5843)
+MINOR: SuppressionIntegrationTest should set StreamsConfig.STATE_DIR_CONFIG (#5847)
+KAFKA-7532: Clean-up controller log when shutting down brokers (#5831)
+MINOR: Ensure consumers are closed in DynamicBrokerReconfigurationTest (#5750)
+KAFKA-7277: Migrate Streams API to Duration instead of longMs times (#5682)
+MINOR: Increase timeout for starting JMX tool (#5735)
+MINOR KAFKA-7406: Follow up and address final comments (#5730)
+KAFKA-7429: Enable key/truststore update with same filename/password (#5699)
+KAFKA-7456: Serde Inheritance in DSL (#5521)
+KAFKA-7428: ConnectionStressSpec: add "action", allow multiple clients (#5668)
+MINOR: fix scala serde tests (#5644)
+MINOR: Remove deprecated Metric.value() method usage (#5626)
+MINOR: Missing throttle time in OffsetsForLeaderEpoch response (#5635)
+KAFKA-7347; Return not leader error for OffsetsForLeaderEpoch requests to non-replicas (#5576)
+MINOR: replace deprecated remove with delete (#5565)
+KAFKA-7316: Fix Streams Scala filter recursive call #5538
+MINOR: Fix transient test failure in DynamicConnectionQuotaTest (#5544)
+Minor: add valueChangingOperation and mergeNode to StreamsGraphNode#toString (#5522)
+KAFKA-7164; Follower should truncate after every missed leader epoch change (#5436)
+KAFKA-7261: Record 1.0 for total metric when Count stat is used for rate (#5484)
+KAFKA-6751; Support dynamic configuration of max.connections.per.ip/max.connections.per.ip.overrides configs (KIP-308) (#5334)
+MINOR: Follow up for KAFKA-6761 graph should add stores for consistency (#5453)
+KAFKA-7247: Update a link to Apache BookKeeper project (#5460)
+KAFKA-7255: Fix timing issue with create/update in SimpleAclAuthorizer (#5478)
+MINOR: add spotlessScalaCheck to jenkins job (#5473)
+KAFKA-7183: Add a trogdor test that creates many connections to brokers (#5393)
+MINOR: clean up node and store sensors (#5450)
+MINOR: Fixed default streams state dir location. (#5441)
+KAFKA-7027: Add overloaded build method to StreamsBuilder (#5437)
+KAFKA-7194; Fix buffer underflow if onJoinComplete is retried after failure (#5417)
+ MINOR: fix upgrade docs for Streams (#5394)
+MINOR: Fix format violations streams scala tests (#5402)
+MINOR: Upgrade rocksdb to 5.14.2 (#5343)
+MINOR: Upgrade RocksDB to 5.13.4 (#5309)
+MINOR: KAFKA-7112: Only resume restoration if state is still PARTITIONS_ASSIGNED after poll (#5306)
+MINOR: Fix comment in quick union (#5244)
+MINOR: Add note about num.standby.replicas (#5271)
+MINOR: report streams benchmarks separately (#5275)
+MINOR: Use exceptions in o.a.k.common if possible and deprecate ZkUtils (#5255)
+MINOR: Handle segment splitting edge cases and fix recovery bug  (#5169)
+KAFKA-7032 The TimeUnit is neglected by KakfaConsumer#close(long, Tim… (#5182)
+KAFKA-7007:  Use JSON for /kafka-acl-extended-changes path (#5161)
+MINOR: Remove APIs deprecated in 0.11.0 for core and clients (#5158)
+KAFKA-6704: InvalidStateStoreException from IQ when StreamThread closes store (#4801)
+MINOR: Remove deprecated KafkaStreams constructors in docs (#5118)
+KAFKA-6562: OAuth Authentication via SASL/OAUTHBEARER (KIP-255) (#4994)
+KAFKA-6937: In-sync replica delayed during fetch if replica throttle is exceeded (#5074)
+KAFKA-6849: add transformValues methods to KTable. (#4959)
+MINOR: A few small cleanups in AdminClient from KAFKA-6299 (#4989)
+MINOR: Remove deprecated parameter in ProcessorContext#register (#4911)
+KAFKA-6867; Corrected the typos in upgrade.html (#4970)
+KAFKA-6825: Make StreamsConfig#DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG public (#4929)
+KAFKA-6778; AdminClient.describeConfigs() should return error for non-existent topics (#4866)
+MINOR: add window store range query in simple benchmark (#4894)
+KAFKA-6765: Handle exception while reading throttle metric value in test (#4869)
+Kafka-6792: Fix wrong pointer in the link for stream dsl (#4876)
+KAFKA-6514; Add API version as a tag for the RequestsPerSec metric (#4506)
+KAFKA-6592: Follow-up (#4864)
+KAFKA-6790: Fix Streams processor node broken link (#4874)
+MINOR: Add NullPayloadGenerator to Trogdor (#4844)
+MINOR: Fix AdminClient.describeConfigs() of listener configs (#4747)
+MINOR: Fix flaky TestUtils functions (#4743)
+MINOR: Fix some compiler warnings (#4726)
+KAFKA-6672; ConfigCommand should create config change parent path if needed (#4727)
+KAFKA-6640; Improve efficiency of KafkaAdminClient.describeTopics() (#4694)
+MINOR: Correct "exeption" to "exception" in connect docs (#4709)
+KAFKA-3806: Increase offsets retention default to 7 days (KIP-186) (#4648)
+KAFKA-6560: Replace range query with newly added single point query in Windowed Aggregation (#4578)
+MINOR:Fix typo in the impl source (#4587)
+KAFKA-5327; Console Consumer should not commit messages not printed (#4546)
+MINOR: follow up on Streams EOS system tests (#4593)
+KAFKA-6430: Add buffer for gzip streams (#4537)
+MINOR: Support dynamic JAAS config for broker's LoginManager cache (#4568)
+KAFKA-6476: Documentation for dynamic broker configuration (#4558)
+MINOR: adding system tests for how streams functions with broker faiures (#4513)
+KAFKA-4641: Add more unit test for stream thread (#4531)
+MINOR: Code refacotring in KTable-KTable Join (#4486)
+MINOR: Fix some streams web doc nits (#4411)
+MINOR: Optimize KTable-KTable join value getter supplier (#4458)
+KAFKA-6244; Dynamic update of log cleaner configuration (#4465)
+MINOR: Replace empty string concattenation with String.valueOf() where possible. (#4369)
+MINOR: a single doc typo (#2969)
+MINOR: update javadocs for serde (#3047)
+MINOR: Fixed a few typos in configs and streams docs (#4452)
+KAFKA-6467; Enforce layout of dependencies within a connect plugin to be deterministic (#4459)
+MINOR: refactored code duplicates in several files (Streams project) (#4357)
+KAFKA-1621 : Standardize --messages option. Closes #58
+[WEEX-639][iOS] fix input component can not limit words number correctly (#1608)
+[core] rm repeat code (#1700)
+* [Android] Fix the problem that changing image.resize in JS doesn't work (#1670)
+[WEEX-645][iOS] video can hide controls (#1636)
+Fix instance double render (#1621)
+* [android] Support miniapp debug (#1610)
+[core] fix list column zero (#1595)
+Revert "merge libweexjss.so to appache (#1573)" (#1575)
+[WEEX-628][Android] add jsframework load adapter (#1568)
+[iOS] Remove object from ref map after delete. (#1563)
+* [android] Add deviation to meta (#1561)
+[WEEX-620][iOS] pageName check and interaction code revert (#1539)
+default multiProgress, if failed in multiProgress turn to singleProgress according to the switch (#1534)
+stop sync if exception occurs (#1532)
+[WEEX-614][Android] apm monitor logic fix (#1527)
+[WEEX-611][Android] Fix java.lang.ArrayIndexOutOfBoundsException (#1511)
+* [Core] Refector code, make jsengine can run on multi thread environment (#1510)
+[WEEX-586][Android] add synchronized for recycle list template (#1488)
+More accurately name call adapter list field. (#2664)
+Don't catch fatal errors. (#2566)
+fix #423: Use ErrorHandler to coerce error responses during async invocations.
+Configure public resources, ref #238
+Add fix suggestion for ClipboardUIManager leak. Fixes #133.
+Recover from executor shutdowns gracefully. (#4365)
+Add maven bom (#4334)
+Support header redaction in HttpLoggingInterceptor (#4287)
+Nullable route annotation (#4257)
+Test for local port used in mock web server (#4246)
+TLSv1.3 with JDK 11 (#4109)
+Rename TlsNode to HandshakeCertificates (#4141)
+Don't pass a null route to the authenticator. (#3840)
+Improve progress example (#3744)
+Don't summarize the request and response headers. (#3576)
+Improve handling of HEAD requests with a Content-Length specified. (#3572)
+Don't call EventListener methods while holding locks. (#3503)
+Include and implement connection found event. (#3459)
+Website only: Update first example to use try with resources (#3096)
+address comments from issue #400
+API 24 (#1423)
+#23 Don't use HttpResponseCache before honeycomb mr2

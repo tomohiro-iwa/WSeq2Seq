@@ -1,0 +1,8 @@
+mv diff.test.txt   diff.test
+mv diff.train.txt  diff.train
+mv diff.valid.txt  diff.valid
+mv issu.test.txt   issu.test
+mv issu.valid.txt  issu.valid
+mv msg.test.txt    msg.test
+mv msg.train.txt   msg.train
+mv msg.valid.txt   msg.valid

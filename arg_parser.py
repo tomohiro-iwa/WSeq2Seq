@@ -29,12 +29,20 @@ def get_parser():
                         help='GPU ID (negative value indicates CPU)')
     parser.add_argument('--resume', '-r', default='',
                         help='resume the training from snapshot')
+    parser.add_argument('--resume-emb',  default='',
+                        help='resume the training from snapshot')
+    parser.add_argument('--resume-enco', default='',
+                        help='resume the training from snapshot')
     parser.add_argument('--save', '-s', default='',
                         help='save a snapshot of the training')
     parser.add_argument('--unit', '-u', type=int, default=1024,
                         help='number of units')
+    parser.add_argument('--l2', '-l2', type=float, default=0.001,
+                        help='number of l2 arg')
     parser.add_argument('--layer', '-l', type=int, default=3,
                         help='number of layers')
+    parser.add_argument('--seed', type=int, default=0,
+                        help='random seed')
     parser.add_argument('--use-dataset-api', default=False,
                         action='store_true',
                         help='use TextDataset API to reduce CPU memory usage')
@@ -48,10 +56,10 @@ def get_parser():
                         help='maximum length of target sentence')
     parser.add_argument('--log-interval', type=int, default=200,
                         help='number of iteration to show log')
-    parser.add_argument('--validation-interval', type=int, default=2000,
+    parser.add_argument('--validation-interval', type=int, default=200,
                         help='number of iteration to evlauate the model '
                         'with validation dataset')
-    parser.add_argument('--test-interval', type=int, default=2000,
+    parser.add_argument('--test-interval', type=int, default=200,
                         help='number of iteration to evlauate the model '
                         'with test dataset')
     parser.add_argument('--out', '-o', default='result',

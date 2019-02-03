@@ -257,7 +257,7 @@ def main():
     parser = get_parser()
     args = parser.parse_args()
 
-    reset_seed(args.seed)
+    #reset_seed(args.seed)
 
     #load vocabulary
     source0_ids = load_vocabulary(args.SOURCE_VOCAB0)

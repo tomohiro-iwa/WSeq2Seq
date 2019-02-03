@@ -1,0 +1,1000 @@
+When starting the app, pass through extras included in the launch intent
+Merge branch 'v2' into mergeOptionsFix
+fixing typo causing subtitle text color cannot be changed
+Display redbox with error even if there is not any react activity yet
+Merge branch 'master' into android-splashscreen-redbox
+v1.1.314 [ci skip]
+Merge branch 'master' into customLeftButtonFixes
+Merge branch 'v2' into birkir/v2/options-typings
+Merge branch 'master' into master
+Merge branch 'master' of https://github.com/wix/react-native-navigation
+Make setBackItem function more clear
+remove useles files
+Merge branch 'v2' into v2-barsTestIDs
+Merge branch 'master' into master
+Initial commit
+Merge branch 'master' into docsify
+Merge branch 'master' into android-splashscreen-redbox
+Merge branch 'master' into add-on-nav-improvments
+Documentation update for peek and pop
+Rebase fixes and renames
+Better options resolving
+Merge stack options
+Renamed RNNRootViewProtocol to RNNParentProtocol and added RNNLeafProtocol
+Revert "Revert "Refactor options (#3962)""
+Merge BottomTabs options
+This fixes an issue with a custom title-view (which has a title and a subtitle) appearing at the left side of the nav-bar instead of the center during a transition animation: when a screen with this title-view is being pushed or when you pop back to it.
+Replaced deprecated RCTReloadNotification
+Remove depreciated createJSModules @override marker
+Remove left button and add it dynamically
+unit tests for ios statusBarBlur
+fix bridge issue
+android too (fixed)
+Unit test passes
+translation
+more refactoring
+refactor
+Fix custom menu icon not displaying
+Merge branch 'master' into remove_redux
+Merge branch 'master' into ios-view-background
+remove deprecated com.facebook.react.uimanager.UIImplementationProvider
+Set layout params on views pushed to stack
+Merge branch 'v2' of github.com:wix/react-native-navigation into v2-animation
+Added tests for touchablePreview event
+add shouldStretchDrawer property to drawerStyle
+Merge branch 'v2' into test_gateway_public_constructor
+Enable RTL support on LeftButton
+Add support for react-native 0.52.0
+Add "react-native link" to iOS installation instructions
+Make returning more clear
+Bump react-native version to 0.43
+Merge branch 'master' into rn52
+Merge branch 'v2' into v2
+Tab fix (Travis)
+Add topBarElevationShadowEnabled style property
+Merge remote-tracking branch 'upstream/v2' into v2
+Merge branch 'master' into master
+Merge branch 'master' into ipad-launch-image
+removed redundant checks for testId
+It now works well on iOS 11 as well
+Merge tag v1.1.314 from wix
+Fixed issue with rightButtons getting ignored in preference for empty Screen buttons
+Fixes updating title font styling with new RCCTitleViewHelper logic
+Implement resetTo
+Add left drawer for Android
+Merge branch 'master' into patch-1
+fix custom nav bar when pop
+Merge branch 'master' into custom_nav_bar
+snackbar
+Merge branch 'master' into feat-add-modal-tabs
+Merge tag 'v1.1.340' into feat-add-modal-tabs
+added tabBarHidden property to navigatorStyle
+Fixes compiler error
+Merge branch 'v2' into v2
+It now works well on iOS 11 as well
+Update NavigationReactModule.java
+Implement ScrollViewDetector
+Collapse on fling
+semicolon
+Merge branch 'v2' into eventRegistryRework
+automatically calls unmount and removes all listeners by componentId. calling remove is optional now
+the people have spoken
+Fix test: Check if the button the sidemenu is no longer visible
+fix navigatorStyle don't work on Drawer
+Merge branch 'master' into master
+Merge options to the specific provided layout
+Detach applied options from DTO - WIP
+Recrusively setDefaultOptions on rootViewController tree
+[android] Check if fabAnimator is not null
+Fix swipe back after resetTo
+Fix image filename
+Add console output
+Add missing image
+Remove unused image
+implements Twin design pattern #63
+filter duplicate numbers
+fix icon size of quick_camera_rear
+Catch ActivityNotFoundException
+increased number of recent chats from 5 to 50
+new translations
+fix call termination sounds
+Be less strict when validating a sms/email address (fall back to allowing it through - but log the recipient).
+- fixed one error in create passphrase activity. - created custom dialog to replace context menus (since context menus won't honor custom typefaces) - replaced context menu in SecureSMS (main activity)
+Russian translation
+Option to intercept "flash" (Type 0) SMS messages
+localizes strings
+Merge branch 'bho' of github.com:guardianproject/TextSecure into bho
+Disable verify button if no message was exchanged
+add theme to import/export activity
+fix jpeg compression max limit issues
+Threshold for alarming notifications
+dont ever close the database when another thread could possibly be executing class code
+Don't archive the archive element
+aesthetic fix and constraint method refactor
+Updates based on comments and changed app to not notify when not default texting application
+- Removed "Attach contact info" from option menu - Added "Contact" to the attachment dialog to send a contact
+notification icon
+Delete actionbar_icon_holo_dark.png
+change lockscreen watermark dark xhdpi
+update launcher icon xhdpi
+Include thread images
+Update ActionBar after swipe
+switched to StringBuilder pattern for date time format
+Rename the constant translation methods
+add missing braces on if
+Support for archive actions
+add notification for key change event, fixes #1460
+Extract compose subhint for SIM name to string resource
+Fix identity verification screen design issues
+fix enter send behaviour
+2791 - removed Media folder, folders correctly created
+Disable screen during earpiece voice note playback
+fix variable names
+Fix cancel behaviour and add the custom value to the summary
+Add reminder in muted threads
+call -> request
+restyled menus for clarity
+fix camera ui thread hangs and view race condition
+- replace arrays with string arrays. converting in preferences
+Don't archive the archive element
+unjankify incoming media sharing
+Stop recycled bitmap crashes Fixes #792
+Change updateNotification logic
+Allow sending SMS/MMS on expired builds
+add com.android.gallery3d.data.Exif
+Shorten 3 strings by removing 'the device's'
+Don't expire timer update notifications
+fixed issue with incorrect classname for bhobutton
+Russian translation
+move log submission to new library
+Added Export Directory Option to Export Menu
+Revert "Added XML Files for Arabic Translation"
+Don't block UI while loading the contact list. Added a simple ContentProvider for push contacts.
+Limit images by pixel count instead of edge size
+use SMS_DELIVER if >= kitkat
+Enable proximity sensor in horizontal orientation
+NotificationPreferenceFragent changes removed as not needed #3397
+fix code format and refactoring
+Merge branch 'bho' of github.com:guardianproject/TextSecure into bho
+transifex tx client pull config
+Fix batch unarchive snackbar text
+show message timestamp in the notification
+Revert "Fixing broken unit test for ConversationAdapter" Fixes #6250 Commit 7286fd9 that broke this unit test was reverted so the change to this unit test has also to be reverted since the unit test currently fails.
+Support for per-recipient muting, blocking, and ringtones.
+Use better if-else brace style
+Fix group message resend button behaviour
+Make sure the convo list gets updated on all changes
+Put indicators to the left of the snippet
+=Fixes #7836 - Adding a long press icon description for the Search icon
+verify glide isn't loading into destroyed activity
+Added adaptive icon support.
+change hdpi-v9
+change mdpi-v9
+Adding contact name and number to what is verified
+fix external gif sharing
+Send m-notifyresp-ind (NotifyRespInd) for retrieved MMS on Lollipop API
+enable media forwarding
+Re-enable resend button after a failed resend
+Fix whitespace
+replace dialogs in DeviceListActivity
+add unit for CursorRecyclerViewAdapter
+updated com.afollestad:material-dialogs
+fiter duplicated numbers
+limit time that an incoming call can ring
+dont merge - artwork for pixelapse
+fix call termination sounds
+restart loader when threadId == -1 to prevent old messages from being displayed when forwarding a message to a recipient for which there is no existing conversation.
+Restore button color on Android 4.4
+optimize out some calls to getParameters
+run Camera.startPreview() off main thread
+Added message category to notifications for Android 5 silent mode.
+Use full icon size
+Use larger version of ic_contact_picture in calls
+switched to StringBuilder pattern for date time format
+Add Serbian language to the list
+Remove unnecessary runQueryOnBackgroundThread
+increase size of group name
+#665 fix handling of alphanumeric sender numbers
+Set the Java locale when selecting a custom language
+Strip separators prior to validating non-email SMS recipients
+Fix notification strings (#4004)
+Fix wrong Chinese language entry
+Replaced add contact info icon
+no more emoji pane fragment
+Use NotificationDatabase for notification preferences
+Tweak conversation list layout
+Fix layout issues with password/pin/pattern protection
+Wording: send -> type (conversation's input text field)
+Websocket reliability changes.
+Transactional interface into TextSecureMessagePipe.
+replaced contextual menus in ComposeMessageActivity class
+build stuff
+foo
+extracted AndroidX version into gradle property
+Update KotlinPoet to 1.0.0-RC1.
+Fix row size for "no data" stats test constant
+Add ExchangeStatsRule
+Create Ordering in CostComparator
+cosmetic: Use type object instead of comment
+Refactor TestTablePartitioningInsertInto
+Add map_entires function
+Make Spiller Factory pluggable
+Rename variable
+Return Optional.empty() when rewrite does not succeed
+Check the field count consistency for rows in VALUES clause.
+Introduce new TIME/TIMESTAMP semantics to scalar functions
+HDFS wire encryption docs
+Support GROUP BY alias of the expression in the SELECT list.
+Extract properties parsing from HttpRequestSessionContext
+Add tests for TPCH distributed using v2 protocol
+Refactor to inject OrderingCompiler and JoinCompiler
+Expose JoinCompiler cache stats via JMX
+Add utility fail scalar functions
+Add `mongodb.ssl.enabled`
+Return a proper exit code from CLI
+Expose table$partitions system table
+Remove redundant throws declarations
+fixup! Enable parsing nanoseconds in date_parse
+Expose stats in Presto JDBC driver
+Fix compiling primitive class constants
+Add release notes for JDBC driver query stats
+Always use fixed TIME as session base in TestDateTimeFunctions
+Add tests covering Time types representation
+Add support for ROW type in TimestampRewriter
+Add benchmark for map-to-map cast
+Support field-based write in SingleRowBlockWriter
+Disallow indeterminate key in MAP type
+Forbid indeterminate values on probe side of HashSemiJoinOperator
+Cleanups in MergeHashSort and TestMergeHashSort
+DROP BEFORE MERGE run spiller tests on Travis
+Accept no output symbol in EnforceSingleRowNode
+Move TransformCorrelatedScalarAggregationToJoin to the iterative optimizer
+Preserve output shape in ScalarAggregationToJoinRewriter
+Trim excessive words file
+Refactor PartitionUpdate to store paths as Path
+Add preGroupedSymbols to AggregationNode
+Preserve local properties of the probe when passing through a LEFT join
+Add support for TIMESTAMP in Hive partition key
+Add HiveType.toString()
+Fix ConcurrentModificationException when dropping Hive column
+System connector predicate pushdown bug fix
+fixup! Replace distributed_join with join_distribution_type session property
+Simplify expressions every time PredicatePushDown is run
+Add more detailed description of Hive connector properties
+Add bigInt optimized implementation
+Add new connector for MapR
+Drop 'experimental' from fast-inequality-joins's description
+Test analysis of lambda captures in aggregation's Subquery
+Fix documentation error for comparison operators
+Fix case handling of view column names
+fixup! Support correlated IN predicate
+Only create staging dir if it doesn't already exist
+Add rewriter to desugar TRY using internal try function
+Use PlanBuilder for subquery planning
+Support CAST to INTERVAL type
+Support subqueries in non INNER join
+Traverse Scalar children in GraphizPrinter
+Add product tests for PUBLIC role
+Implement presto-memory connector
+Document presto-memory connector
+Provisio presto-memory connector
+Issue #6581 : Categorize IOException as HIVE_BAD_DATA
+Add support for orderByScope to AggregationAnalyzer
+Address review comments
+Distribute aggregation for empty grouping set
+Check all TestUnion plans fully distributed
+Fix formatting
+Extract dependsOn method to a utility class
+Do not optimize expression with correlated symbols
+Add ApplyNode support to DesugaringOptimizer
+Use lambda expressions in CassandraSession
+Remove Thrift related configuration properties
+Rename ScalarAggregationToJoinRewriter
+Fix type of MaterializedResult.getOnlyColumnAsSet
+Fix MapBlock.fromKeyValueBlock to allow overallocated collections
+Fix excess memory usage in HttpRemoteTask
+Throw exception when using SET/RESET SESSION from JDBC
+Add support for wildcard patterns in JMX table name
+Add support for coercions in ANY, ALL subquery
+Allow for different implementations of StatementClient
+Prepare metastore interface to accept ROLE for GRANT/REVOKE
+Reorder methods in SqlStandardAccessControl
+Import quicksort of IntBitArray from fastutils
+Migrated ArrayLessThanOperator
+Remove unused import
+"your are" -> "you are"
+Serialize aggregation States to VARBINARY
+Clear interrupt flag after exiting from pager
+Use IS NOT DISTINCT FROM for GROUP BY
+add predicates simplification to SimplifyExpressions
+Optimize CAST from JSON to array
+"your are" -> "you are"
+Merge changes from upstream
+Merge remote-tracking branch 'prestodb/master' into aws-kms-emp
+Remove TableScanNode originalConstraint
+Add support for decimal in JDBC driver
+Reformat TestHiveFileFormats and AbstractTestHiveFileFormats
+Introduce `Varchars` utility class in presto-spi
+AbstractTestQueries for Distributed sort
+Do not prune scan symbols used in currentConstraint
+Make sure currentConstraint uses available columns
+Filter scan constraint to use only accessible columns
+Use unmodifiableSet in Analysis#getColumnReferences
+Add warnings to presto-cli
+Change Hive's default storage format to ORC
+Add spilled data size to Web UI
+Support reloading of partition information in batches from the metastore
+Run PruneCountAggregationOverScalar only for single output default aggregation
+Inline Throwables.propagate
+Upgrade mongodb-driver to 3.6.0
+Add Avro schema url table parameter
+Add StreamingAggregationOperator
+Preserve local properties of the probe when passing through a LEFT join
+Remove obsolete TransformCorrelatedNoAggregationSubqueryToJoin
+Add support for TRY to expression matcher
+Fixed stacked bar chart with one stack
+Fix for Issue #181
+Fix horizontal bar grid dash effect
+Fixing the following error "W/OpenGLRenderer: Path too large to be rendered into a texture" by drawing using the fill path to clip a fill in the canvas, instead of drawing the path.
+Merge branch 'master' of https://github.com/PhilJay/MPAndroidChart
+Partial fix for #1475
+Fixups
+Delete this file
+Fixes #51 : Locked screen orientation to portrait
+merges with master
+Update tests to JUnit 4
+Reimplemented LottieValueAnimator
+Invalidate LottieDrawable with itself so that it can be verified
+Network fetching mostly works
+make lottie drawable implement animatable
+Add a warning for < 4.7.1
+It builds
+Fix time stretch double calculating for matte layers
+Fixed tests
+More cleanup
+Fix test
+Fix for [box2d][gwt] World.getFixtures() missing from sources #5383
+Resolve #2502
+Fix warnings about JRE 1.6
+Added note to CHANGES.
+Remove possible whitespaces before adjusting xAdvances of wrapped line
+Put Batch calls in try-finally to allow recovery from thrown exceptions
+Removed unnecessary Align. in Align
+Convenience methods for Align - test for horizontal/vertical alignment
+Also remove whitespace at front of run - GlyphLayoutWrapTest
+Converted CR/LF to LF
+Merge branch 'master' into patch-2
+Methods renamed, comments updated - .nonEmpty() is .now hasItems() - Changed comments for methods according to review request
+Improved controllers detection to avoid unrelated devices being detected as game controllers
+Converted CR/LF to LF
+Update to latest (#1)
+Fix issue where Android wouldn't detect bluetooth
+Added .isEmpty() and .nonEmpty() methods to collections
+gdx-controllers: allow specifing custom controllers
+Add focusWindow() to Lwjgl3Window
+Converted CR/LF to LF
+Added FileHandle#map(), can be used to memory map a file
+Add screen edges that override system gestures as iOS RoboVM configuration option
+Fixes #5059. Sounds randomly not being played on Android SDKs higher than 4.4
+Convenience methods for Align - test for horizontal/vertical alignment
+Put Batch calls in try-finally to allow recovery from thrown exceptions
+Apply code review changes
+Fix mistake in forgeting to replace package, and class name for core main file when generate
+add missing import MaterialEmissiveTest
+Removing uneeded imports * How did this even work
+Handle input pointer id lookup fail not to be fatal on robovm
+Fixed an issue that caused textfields to lose focus due to invisible windows when pressing tab. The findNextTextField method now searches up the parent hierarchy to determine if all parent actors and the actor itself are visible. If any of the parent actors or the actor itself are invisible, the findNextTextField method will ignore them.
+Convenience methods for Align - test for horizontal/vertical alignment
+Converted CR/LF to LF
+Changed Constructor of Ellipse(Circle)
+Update Intersector.java
+Update Intersector.java
+Update CHANGES
+Prevent controller extension from swallowing keyboard events
+Add screen edges that override system gestures as iOS RoboVM configuration option
+Add focusWindow() to Lwjgl3Window
+-The ParticleController stores a frame time in its deltaTime member but this value is hard-coded at 1/60 regardless of framerate. This change adds an overload to the ParticleController's update() method to take the delta time. This allows the particles to adjust their time deltas for faster or flower framerate. The change also allows callers to cause particle effects to be played back at faster or slower speeds. -This change also adds overloads for update() and updateAndDraw() of the ParticleSystem class, each of which takes a frame time and adds an overload for the ParticleEffect update() method. -RegularEmitter previously only used the floor of the number of milliseconds that had passed since  the last update when calculating percent of the lifetime lived for each particle. For playback of  particle effects that were being played at .1 times the speed of the default speed, .00016666 ms were elapsed between calls to update(), which rounds down to 1 ms rather than 1.666 ms. This meant that the particle effect being played at .1 speed was actually being animated for 16 times as long rather than 10 times as long as the same effect played back at 1x speed (because the floor of .001666 *1000 = 16 but floor of .00016666*1000 is 1.) -This change also updates the Flame tool to make it respect the delta multiplier
+now reflecting changes of #3804, and #3805 and also suggestion from AldousP
+Merge remote-tracking branch 'refs/remotes/libgdx/master'
+Update to latest (#1)
+Add screen edges that override system gestures as iOS RoboVM configuration option
+Add focusWindow() to Lwjgl3Window
+wrap optimisation
+Fix issue where Android wouldn't detect bluetooth
+Prevent controller extension from swallowing keyboard events
+Add SplitPane.isCursorOverHandle()
+Methods renamed, comments updated - .nonEmpty() is .now hasItems() - Changed comments for methods according to review request
+Merge remote-tracking branch 'refs/remotes/libgdx/master'
+Fix gwt
+Added jvm arg "startOnFirstThread" in the rust task for macOS
+Removing uneeded imports * How did this even work
+Slightly better exception message
+Added .isEmpty() and .nonEmpty() methods to collections
+Replace HashMap with ObjectMap
+Prevent controller extension from swallowing keyboard events
+Bit operators for comparison
+Use StringBuilder instead of StringBuffer as it offers high performance in single thread context as it is generally the case.
+Replace HashMap with ObjectMap
+Removed unnecessary Align. in Align
+Fixing writable file mapping. - RandomAccessFile allows us to actually obtain a rw FileChannel
+Update mappings for Xbox controller
+Forgot to add the FlameMain.java changes
+Fix issue where Android wouldn't detect bluetooth
+Replace HashMap with ObjectMap
+GwtFileHandle#map() now throws unsupported
+Solves issue #5025
+Improved controllers detection to avoid unrelated devices being detected as game controllers
+Changed Constructor of Ellipse(Circle)
+Vector2.java
+Merge branch 'master' into filehandlemap
+GL20 texture filter types description
+Methods renamed, comments updated - .nonEmpty() is .now hasItems() - Changed comments for methods according to review request
+Bit operators for comparison
+Fixed an issue that caused textfields to lose focus due to invisible windows when pressing tab. The findNextTextField method now searches up the parent hierarchy to determine if all parent actors and the actor itself are visible. If any of the parent actors or the actor itself are invisible, the findNextTextField method will ignore them.
+Slightly better exception message
+Merge remote-tracking branch 'upstream/master' into filehandlemap
+Merge branch 'filehandlemap' of PokeMMO/libgdx into filehandlemap
+Changed Constructor of Ellipse(Circle)
+Update to latest (#1)
+Put Batch calls in try-finally to allow recovery from thrown exceptions
+Added debug mode to I18NBundle
+Before adding a new row to a glyph page, see if it actually fits
+Extend AppCompatImageView, as recommended by Google, in order to allow the use of vectorDrawables.
+add Region to filter TouchEvent
+reverted changes for gradle-wrapper
+added menu option "debug enabled" to sample/PhotoViewSampleApp
+Made some debug-properties public to allow APhotoManager app to change these in the settings dialog and to allow filtering crash reports
+downgrade gradle-2.14 to gradle-2.10 because jitpackio doe not support it
+updated FollowUserTask to show progress dialog
+Open Github from link
+Gradle --Removed unecessary
+Add rounded corners to all avatars
+Disable preDexing only on continuous integration systems
+Added Gradle support
+Add route overview functionality
+Added configuration for Eclipse maven plugin to download sources and javadocs for the libraries
+Ineficient string buffering fix.
+Fix for #320
+Added framework option to configure static text file charset
+Enhancement: concept of finally filter
+check rtl
+Resolving
+Resolving
+As discussed #343
+Failing unit tests for timeouts on HystrixCommands not causing thread interruptions
+Write command completions to HystrixCommandEventStream (still writing to RollingNumber/RollingPercentile as well)
+Wired HealthCounts up to HystrixCommandEventStream. * They get calculated only on health count intervals
+Added AbstractCommand.getExecutionException to solve #998
+Add new mediatypes according to #2132
+Fix #1190
+Remove redundant test.
+Merge branch 'patch-1' of https://github.com/jf17/gson into patch-1
+Remove redundant test.
+Update JsonAdapter documentation
+Update Gradle and Build Tools to v27.0.2
+fix: Fix for #377 (Jadx in Windows open with list)
+removed unneeded call
+Optimized class to be more generic
+Merge remote-tracking branch 'Curzibn/master'
+upgrade lib version
+Update README.md
+Changed onPanelLayout
+Hide the FAB when above 1/8 of the screen height
+Update README.md
+Update README.md
+Fixed missed setMeasuredDimension
+Moved child count checking to onMeasure
+Added more fab modes
+Update and fix sample
+Merges with master
+Add some validation to elements before attempting to process them, in order to avoid falling prey to upstream compilation problems causing thrown exceptions rather than reported errors.
+Remove extra this label
+Update README apt version
+fix: OnSubscribe class must be final & not public
+Regardless of what other views want to receive Action.MOVE events, the SlidingMenu always consumes them.
+Merge remote-tracking branch 'upstream/master'
+getPointerIndex fix
+build fix
+Data binding fixes clean (#712)
+- Fix for shadow not respecting flag    - API 21+ was not using the flag at all    - API 20- where not removing the margin when no shadow was displayed    - API 20- set the default visibility of the shadow to GONE
+Move missing resources to right places
+add missing newline
+Removed DribbblePrefs.
+Improve Patch for issue #142
+Add Kotlin lint via ktlin
+Delete unneeded classes.
+Merge branch 'master-sync' into cm/sync-api
+displaying NDK conf
+giving permission to read ANDROID_NDK/RELEASE.TXT
+Condensed ndk install to one RUN statement
+printing NDK location
+Merge branch 'cm/sync-api' into nh/build-android-sync
+Add --rm to ros docker
+Enable listeners on RealmList
+generate getters and setters for primitive list
+fix tests
+Merge branch 'my/primitive_list_8_annotation_processor' into my/primitive_list_9_RealmList
+fix #5233
+use OsObjectSchemaInfo.addPersistedValueListProperty()
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+Merge branch 'feature/primitive_list' into my/primitive_list_8_annotation_processor
+refactor ManagedListOperator and its sub-classes
+use thrown.expectMessage()
+Merge remote-tracking branch 'origin/master' into mc/object-notification
+Return String[0] if the object was deleted.
+Fix rows being deleted when changing primary key column to required.
+Merge remote-tracking branch 'origin/master' into mc-multi-process
+Cleanup
+Cleanup
+findFirstAsync returns invalid row if no object
+remove extra ';' from generated code
+Create object without setting PK is not allowed
+use memmove impl from kernel
+Only apply the hack to arm32
+Fix javadoc
+Cleanup current unit tests.
+Merge branch 'master' into cm/bug/iterators
+PR feedback
+Merge branch 'master' into lk/robolectric
+Adding java.library.path instead overwritting its value.
+PR feedback
+Fix checking REALM_CORE_HOME correctly.
+Remove class not used
+Merge branch 'mc/bug/hack-memmove' of github.com:realm/realm-java into mc/bug/hack-memmove
+Switching to DRY libc11's implementations
+add @Nullable annotation to parameters and suppress null related warnings
+remove unused import
+PR comments
+More PR feedback
+Improve wording
+Better error reporting from RunInLooperThread
+Fixed wrong object returned for deleted objects.
+Paramaterized the iterator tests.
+Merge branch 'cm/collection-interfaces' into cm/bug/iterators
+Roar unit tests
+More unit tests + all unsupported methods now throw UnsupportedOperation instead of RealmException
+Added RealmList ConcurrentModification tests
+Merge branch 'cm/bug/listener-interaction' into cm/post-at-front-of-queue
+Merge branch 'releases' into cm/post-at-front-of-queue
+Whitespace
+Backup
+Convert tests to JUnit4
+writeEncryptedCopyTo might throw RENSE
+Download core from public location. Upgrade to latest sync beta.
+Revert "Linking to debug sync cuases magic crash."
+PR fix
+update android gradle plugin to 3.0.0-alpha5
+Merge branch 'releases' into my/agp_3.0-alpha5
+Merge branch 'releases' into my/agp_3.0-alpha5
+update android gradle plugin to 3.0.0-alpha8
+Merge branch 'releases' into my/agp_3.0.0
+add .
+Backup
+Merge branch 'cm-dynamic-api' into cm-new-migration
+Fix unit test + cleanup
+Added forEach() iterator, getType() and unit tests.
+Backup
+Unifying class and className usage + JavaDoc updates.
+Added clear(), allObjects() and allObjectsSorted() to DynamicRealm
+Merge branch 'master' into cm-new-migration
+Merge branch 'master' into cm-new-migration
+PR fixes.
+Squashed commit of the following:
+Remove Group
+Use package protected getter for shared group pointer
+Fixed race condition between Realm change notifications and other events.
+Prevent triggering unnecessary REALM_CHANGED events. Spelling
+WIP fixed uncatched exceptions
+remove a whitespace
+fix JNI method declaration (jclass for static methods)
+PR feedback
+Merge remote-tracking branch 'origin/releases' into nh/fixing_#3105
+Merge remote-tracking branch 'origin/releases' into nh/fixing_#3105
+Skip managed object when insert collections
+Merge remote-tracking branch 'origin/master' into nh/bulk_insert
+update RealmConfigurationTests `asset_file.realm` schema to include new models & not trigger a migration needed
+Doc & Javadoc
+rename test
+Backup
+retrofit-2 documentation
+Merge branch 'feature/rxjava2' into cm/convert-rxjava1-to-rxjava2
+Backup
+Fix unit test + cleanup
+Remove interface.
+Merge branch 'cm-dynamic-api' into cm-new-migration
+Merge branch 'cm-feature-dynamic-migration-api' into cm-realmtype
+Cleanup naming + Javadoc fix.
+Merge branch 'cm-feature-dynamic-migration-api' into cm-dynamic-realm
+Merge branch 'master' into cm/kotlin-extension-lib
+Fixed unit tests
+Cleanup
+PR feedback
+Remove the newly added method `isLoggedOut`, and use direct the UserStore to check if the user explicitly logged out, to reduce the confusion from the user perspective between `isValid` and `isLoggedOut`
+PR fix
+add @Nullable annotation
+Merge branch 'cm/use-npm' of https://github.com/realm/realm-java into cm/use-npm
+Merge remote-tracking branch 'origin/master' into nh/offline-client-reset
+Update to alpha27
+Using a custom ConnectionPool to control idleConnection (causing test suite incapable of stopping the ROS instance)
+Add sleep to overcome delay from ROS
+Use list instead of map
+added a description of how proxy object should be created in the Javadoc comment of RealmProcessor
+Merge remote-tracking branch 'origin/master' into nh/bulk_insert
+Merge remote-tracking branch 'origin/master' into nh/bulk_insert
+- Fixing tests - Update Javadoc
+Skip managed object when insert collections
+PR fix
+Move function to util.h
+No need to define exception kind twice for testing
+TypeBasedNotificationsTest fix
+Ranaming and java doc
+Merge remote-tracking branch 'origin/master' into mc-multi-process
+Attempt to use hash_code
+Temporary: Testing only String
+Add ObjectStore support from branch-in-progress.
+Fix Findbugs warning
+JavaValue variant type
+Cleanup
+Expanded description
+SyncUser.all() returns Map
+WIP RealmQueryTests
+JNI nullable check for UncheckedRow
+PrimaryKey javadoc change
+Fixing issue with Cyclic dependency insert or the existing copyToRealm
+KeepMember OsObject.notifyChangeListeners
+Modify APIs to support Primitive List feature (Design 1)
+Primitive List feature(Part2: Nullability changes) (#5150)
+fix test
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+Merge branch 'my/primitive_list_8_annotation_processor' into my/primitive_list_9_RealmList
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+Merge branch 'my/primitive_list_8_annotation_processor' into my/primitive_list_9_RealmList
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+added tests for non-null primitive list
+Support listener on OsList
+Merge branch 'my/primitive_list_9_RealmList' into mc/primitive_list_13_Listener_on_OsList
+update exception message
+update RealmList.toString()
+remove unnecessary index checks
+fix intentation
+PR fix
+Fix tests.
+update test
+Another attempt
+Relax time requirements + Remove to verbose a log.
+use isPrimaryKey()
+fix a bug that unexpected realm object is created by default value of RealmModel/RealmList fields
+Merge branch 'master' into my/issue777
+Update OS
+Formatting
+Add tests for multiple logged in users.
+Fix unit test + throw correct exception type
+Fixing tests, using latest OS
+PR feedback
+Added new unit tests for scenarios mentioned in #4093
+relax the field count check
+make ColumnInfo CLoneable
+A bit cleaning up
+Only queries are new
+Refactor notify listeners
+test name fix
+Begun work on checking conflicting policies
+Cleanup
+Better Javadoc
+Cleanup
+Support unit tests with the plugin
+Make RealmBase public and move JavaDoc there.
+Backup
+remove unused import
+implement logic for primitive list in RealmList
+fix tests
+throw an exception if query or aggregation feature is used for primitive list
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+Merge branch 'my/primitive_list_8_annotation_processor' into my/primitive_list_9_RealmList
+fix compilation error
+Merge branch 'feature/primitive_list' into mc/primitive_list_10_oslist_JNI
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+update test case to expose an issue
+Revert non-related changes
+fix exception message
+use thrown.expectMessage()
+Merge branch 'feature/primitive_list' into my/primitive_list_9_RealmList
+Remove useless log
+Merge remote-tracking branch 'origin/master' into feature/object-store
+Use write_copy from object store
+Test fix
+Submodule sync
+Merge pull request #2915 from realm/mc/feature/os-subtree
+Merge commit '2395585a0ab92192cf23a3723167b91f4109d37d' into feature/object-store
+Merge remote-tracking branch 'origin/feature/object-store' into mc/feature/os-shared-realm
+Exception for incompatible lock file changes
+Convert invlid transaction ex
+Fix preprocessor test case
+More important fix
+Code formatting
+Get finalizer ptr only once
+Merge commit '270c80f6e16194ead7b17bf889f4401b45eeb56f' as 'realm/realm-library/src/main/cpp/object-store'
+Use SharedRealm from object store
+JNI size should return a value
+Build & warning fix
+Use move and build error
+Use package protected getter for shared group pointer
+Working on the annotation processor
+Move JNI build to cmake
+Merge remote-tracking branch 'origin/releases' into mc/cmake
+Merge branch 'master' into cm/waitforserverchanges
+Fine grained locks for RealmCache
+SHould check the both global ref count
+doc fix
+add unit tests for 3 different cases (add, remove & change PK)
+Unifying class and className usage + JavaDoc updates.
+Updated with new methods.
+REALM_ENABLE_SYNC should be boolean macro
+Fix the warnings of StrictMode
+Revert "Remove optional APIs if dependencies don't meet (#2727)"
+Update ObjectStore submodule
+Merge branch 'my/primitive_list_6_OsList' into my/primitive_list_7_Schema
+Merge branch 'my/primitive_list_6_OsList' into my/primitive_list_7_Schema
+added Javadoc comment and RealmList.toArray()
+Merge branch 'my/primitive_list_8_annotation_processor' into my/primitive_list_9_RealmList
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+fixed a bug that getFieldType returns UNSUPPORTED_TABLE and isColumnNullable always false against primitive list field.
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+Merge branch 'my/primitive_list_8_annotation_processor' into my/primitive_list_9_RealmList
+Merge branch 'my/primitive_list_8_annotation_processor' into my/primitive_list_9_RealmList
+reformat
+add size check to OsListTests.addNull_insertNull_setNull_requiredList(OsList)
+stop to add backlink field into nullable field list
+add TODO comment
+fix test case name
+Update object store
+Better error messages if tests fail.
+Update changelog date
+revert version
+Add regression test for old SyncUser JSON
+Disabling false positive findbugs warning
+Merge remote-tracking branch 'origin/master' into nh/rm_object_server_user
+PR feedback
+Cleanup current unit tests.
+Thread local notifactions are now triggered using the Looper instead of immediately
+Merge branch 'master' into cm/collection-interfaces
+Fix unit tests
+Merge branch 'cm/collection-interfaces' into cm/bug/iterators
+Language and comment fixes.
+Restricted visibility of constants
+Merge branch 'master' into cm/bug/iterators
+Updating change log
+Fix the warnings of StrictMode
+Add RealmQuery.equalToAny() (#841)
+Revert auto-formatting again.
+PR feedback: generalize tests.
+Merge branch 'master' into cm/transient-fields
+Merge branch 'master' of github.com:realm/realm-java into kg-feature-null-support
+Merge branch 'master' of github.com:realm/realm-java into kg-feature-null-support
+Merge branch 'master' of github.com:realm/realm-java into kg-feature-null-support
+Merge branch 'master' of github.com:realm/realm-java into kg-feature-null-support
+Merge branch 'kg-fix-migration-tests' of github.com:realm/realm-java into kg-feature-null-support
+Remove disabled test
+Merge branch 'my/primitive_list_7_Schema' into my/primitive_list_8_annotation_processor
+Merge branch 'my/primitive_list_8_annotation_processor' into my/primitive_list_9_RealmList
+Merge branch 'mc/primitive_list_10_oslist_JNI' into my/primitive_list_8_annotation_processor
+Merge branch 'master' into feature/primitive_list
+Handle non-null primitive list in JNI
+simplify Proxy's createDetachedCopy()
+fix todo comment
+remove special handling to byte array in RealmList
+use thrown.expectMessage()
+Add JNI support for switching between nullable and non-nullable.
+Fix column indices
+Move JNI build to cmake
+Use JUnit4
+Remove BaseRealm.handler
+Clean up commitTransaction
+Cleanup
+Merge branch 'cm/bug/listener-interaction' into cm/post-at-front-of-queue
+improve readability
+release is ready before debug.
+Exception for incompatible lock file changes
+Add wait for change
+Test fix
+Use JUnit4
+Add missing file
+Fix preprocessor test case
+Merge remote-tracking branch 'origin/feature/object-store' into mc/feature/os-shared-realm
+Remove useless Table.getSortedView
+Remove FIXME
+Move RealmTransformer code to Kotlin
+Adding unit test: non-null strings for nullable fields.
+Updates due to PR feedback
+Merge branch 'master' of github.com:realm/realm-java into kg-feature-null-support
+Merge branch 'master' of github.com:realm/realm-java into kg-feature-null-support
+Adding JSON unit tests
+Null support for boxed Boolean.
+Remove unnecessary check in proxy
+@Required should not be applicable to RealmObject
+Fix IOSRealmTests, required fields.
+Add migration test case for @Required
+All boxed types processor -- in progress
+Update Realm Json test cases for null
+Adding isNotNull() for link queries
+PR fix for ClassMetaData.java
+Casting type should be boolean not the boxed type
+Fix changelog
+add a test that reproduce https://github.com/realm/realm-java/issues/4487
+Return String[0] if the object was deleted.
+using Object Store Session/SyncManager
+update OS commit
+Merge remote-tracking branch 'origin/master' into nh/objectstore-syncmanager
+Throw IllegalStateException instead of process crash when any of thread confined methods in RealmQuery is called from wrong thread (#4228).
+removed section header comments
+Add tests to check compactOnLaunch.
+Fix tests.
+Wrong object store
+typo
+PR feedback
+PR fix
+ndk.dir for README
+Update cmake to 3.6
+added  task that removes  dir on clean
+Test and documentation cleanup
+stupid pointer mistake
+Merge branch 'mc/bug/hack-memmove' of github.com:realm/realm-java into mc/bug/hack-memmove
+Use bcopy() from FreeBSD
+PR fix
+Unit test for insertOrUpdate
+Merge remote-tracking branch 'origin/master' into mc/os-schema-table-initialization
+Use SharedRealm from object store
+Add wait for change
+Convert invlid transaction ex
+Fix preprocessor test case
+Convert invalid key exception from OS
+Make shared realm native pointer package protected
+WiP: Callback to migration
+Updating proxy classes to match the RealmObjectSchema class.
+More PR feedback
+Merge branch 'cm/partial-sync/named-subscriptions' into cm/partial-sync/support-unsubscribe
+Test case fix
+Merge remote-tracking branch 'origin/master' into mc-multi-process
+Revert "Removed deprecated methods from Realm. Bumped dev version to 0.83.0"
+Check m_deleted and return null
+bump secure-store example version
+PR feedback: array version -> vargs version.
+make all methods on RealmObject and all public Realm classes final
+Added notification tests for none-synched RealmResults.
+Merge branch 'master' into cm/handler-notifications
+refresh send a REALM_CHANGED for looper thread
+PR Feedback
+Merge branch 'cm/collection-interfaces' into cm/bug/iterators
+Cleanup unit tests
+Merge branch 'master' into cm/bug/iterators
+Roar unit tests
+Language and comment fixes.
+Make comment more precise
+Added RealmList ConcurrentModification tests
+Merge branch 'cm/use-npm' of github.com:realm/realm-java into cm/use-npm
+Retry server stop in case of errors.
+Fix dodgy code
+Spelling and layout
+Merge branch 'master' into feature/backlinks
+Refactor all field parsing into the FieldDescriptor class All tests passing.
+I believe all remaining work is C/C++
+Disable Backlink Queries All Unit Tests Passing
+WIP USerStore from ObjectStore
+Using the Object Store to save SyncUser
+Logging if memmove() isn't broken
+Use bcopy() from FreeBSD
+use memmove impl from kernel
+Merge branch 'mc/bug/hack-memmove' of github.com:realm/realm-java into mc/bug/hack-memmove
+Switching to DRY libc11's implementations
+Merge remote-tracking branch 'origin/master' into mc/os-schema-table-initialization
+use __realm_memove for testing
+Addressing review points
+More unit tests + all unsupported methods now throw UnsupportedOperation instead of RealmException
+PR feedback
+Fixes missing file for dependency view
+try newer testcontainers
+Support for running Zipkin behind a reverse proxy  - subfolder 'zipkin' is enforced  - rewrite of the 'base' tag in the 'index.html' file is required
+Refactors project around v2 storage apis
+Don't sort span names in elasticsearch
+Fix dependency scope in zipkin-autoconfigure-collector-scribe
+Merge branch 'master' of github.com:twitter/zipkin
+code consistency
+clarify write api
+Adds an example to Endpoint.port note
+only hit travis repos on travis builds
+rename basic auth properties to just username and password
+Bump to finagle 5.1.0, util 5.2.0, ostrich 8.1.0
+Added a config file for Finatra which matches the other common configs (zookeeper on localhost) and doesn't override the query server Fixed the collector script to reference the scribe JAR rather than the server JAR
+Move Trace, TraceSummary from common to query package
+Merge branch 'master' of github.com:twitter/zipkin into common_refactor
+Query gem needed endpoint thrift structs
+backbone views wip
+Replaced original code with backbony replacement
+Remove Trace model
+Merge branch 'master' of https://github.com/twitter/zipkin into hadoop_jobs
+Merge branch 'master' of https://github.com/twitter/zipkin into hadoop_jobs
+Bump twitter dependency versions
+Added simple job running script
+Merge branch 'master' of https://github.com/twitter/zipkin into twitter
+Make processing easier to implement generically
+Move Trace logic from Storage to QueryService
+Renamed job-runner and made Processor accept both popular annotations and popular keys
+Add find_data.sh
+Delete unused file
+Add doc
+Add static trace rendering page
+Prevents backlog when writing to Elasticsearch
+fixes collapse feature
+Adds /health endpoint to zipkin-query and zipkin-web
+Add AUTH support, fixes #383.
+Changes as advised.
+Skips Cassandra indexing of zero-duration rows
+Adds zipkin.internal.Span2Codec.JSON
+Backfills tests for async spans in the dependencies graph
+Refactors elasticsearch service and span name query to be like c*
+Prevents Kafka processing from halting on storage errors
+Reverts Kafka client to 0.8.x to avoid broker compatibility issues
+Added new test cases for kafka10 collector autoconfigure. The first ensures Kafka consumer configuration overrides are correctly included in properties used to construct new consumers. The second ensures the kafka10 collector will not be loaded if the bootstrap servers property is set to an empty value.
+Merge remote-tracking branch 'upstream/master'
+Merge remote-tracking branch 'upstream/master'
+Minor cleanup
+Adding FileAsyncHttpResponseHandler
+Added removeHeader
+Update the 'sendResponseMessage' with the 'protected' modifier so subclasses can override the method's functionality.
+Eclipse added com.android.ide.eclipse.adt.LIBRARIES
+Simple option to set the charset for the response string. Default is still "UTF-8".
+added POST method using HttpEntity parameters
+Cleanup and removed memory duplication
+Merge remote-tracking branch 'upstream/master'
+added POST method using HttpEntity parameters
+Fix crash in RetryHandler
+Fix a bug: clear the outline if unset
+Fix APP_ABI
+Merge remote-tracking branch 'origin/master' into 64bitclean
+Remove armeabi (Remove from NDK r17)
+fresco-issue-1827-2: (ImageFormatChecker.java) reorder determineImageFormat() such that default format checker is run first
+fresco-issue-1827-2, bugfix: (ImageFormatChecker.java)
+Upgrade circle ci's ndk version to r17b
+Fixed typos
+Update DefaultDiskStorage,java (issue 898)
+Maybe a fix for CacheStats getSize() returns -1
+upgrade ndk to r16b - #2040
+Merge branch 'master' into fix_ndk
+Merge branch 'master' into fix_ndk
+Split OkHttpNetworkFetcher's fetch method to make part of it reusable
+Merge branch 'master' into fix_ndk
+override abstract method isExternal() in DiskStorage
+Added stetho for volley
+Remove -keepattributes
+More code review feedback, and set Git as VCS in IntelliJ
+Added missing file.
+update config proguard for retrofit 2
+Solved all style problems
+Fixed MockRestAdapter to mimic new OnSubscribe, added RxSupportTests
+Some additional java.io.File utilities in Files
+Incorporate feedback from code review
+Incorporate feedback from code review
+Remove superfluous method; improve javadoc on build() method
+Moved Native into a top-level class (VM couldn't find method in the nested class). Added a test app.
+Moved Native into a top-level class (VM couldn't find method in the nested class). Added a test app.
+Moved Native into a top-level class (VM couldn't find method in the nested class). Added a test app.
+Deploy snapshots
+Merge remote-tracking branch 'trunk/master' into bug/transaction-too-large
+New 512x512 icon
+Merge pull request #52 from pepyakin/sp/version-in-trace
+Update icon for 1024x1024 export
+Merge pull request #82 from dmarcato/patch-1
+Merge pull request #108 from square/py/travis
+Ignored UserManager leak
+Merge pull request #112 from pepyakin/sp/travis2readme
+Add excluded refs to leak info
+Protect DisplayLeakActivity.setTheme() from receiving an incompatible theme
+Use correct thread priority setting mechanism.
+Samples with Scroll Listener
+Sample with ViewPager
+Code styling
+fade duration can be changed from requestcreator
+Changed dependency to Sanselan
+Use correct thread priority setting mechanism.
