@@ -1,0 +1,1000 @@
+Allow injecting TestScoped values in child threads.
+correct publicsuffix import
+Initial Bazel workspace setup
+Remove arithmetic optimizer to keep Reshape op in the output graph.
+Fix Mercurial links
+Add docstrings for `scope` in annotate
+Address issue 14: note availability concerns
+Allow analysis to run inspite of an exception in bugreport
+Add const constructor to LocalProcessManager
+Add test for infering __init__.py module names.
+https instead of http
+pixiecore: Provide a default value for listen-addr flag
+Ignore very fresh points from Datadog (fix #8)
+Add readme for new option
+Add support for pruner
+Fixing broken link in spec docs
+update body / label color
+do not decompress partial content
+Add a ssh GitHub example based on my experience
+Add INTERROBANG and INVERTED INTERROBANG.
+Fix #22 #21
+Update AppAuth condition
+Ran rustfmt
+Merge branch 'master' into fix-36
+starlark: fix flaky Example of parallel loading
+Add a threadsafe hot-swappable pipeline
+Merge branch 'master' into config
+Document setup steps
+Fix print()
+urlparse.urlparse => urllib.parse.urlparse
+sort more dict keys
+Add support to unescape &#128077;
+squash gts fix
+Add a simple script to run iwyu, also do run it.
+Also handle short writes.
+Error Reporting Enhancement: Include Raw data that causes the exception for Error action.
+Make sure close all files except stdin
+bundle tests
+Configure continuous integration #3
+internal/proxy: port script from Go Cloud to create module proxy
+Update CONTRIBUTING.md
+Work around problems with different versions of gflags.
+Use pkg-config for LDFLAGS and CXXFLAGS
+Remove the gflags dependency.
+Use six for more python 3 dictionary compat
+Fixes from review.
+Add custom target to run formatter and lint.
+Fixes for review comments
+Use silent build rules
+Updates for release of BouncyCastle 1.56
+Removing duplicates from BigIntegerTest.
+minor typos
+Fix #23 and #2
+Add comment
+Using the C++ style guide
+add travis support
+Fixing build on windows with Visual Studio
+Issue #258 Fairplay support patch Added necessary unit test for fairplay encryption info to simple_hls_notifier_unittest.cc
+Add `--dry-run` and `--set-exit-if-changed` option to CLI
+Add `--dry-run` and `--set-exit-if-changed` option to CLI
+Misspell
+Use normal quotes for a pod import
+Add `FileSystem.path`.
+Readability sugestion by cbracken
+Don't use LIBUSB_HOTPLUG_NO_FLAGS, use zero value
+first implementation of the write stream transfer
+Gah. I messed up some rebases clearly.
+Review comments 3
+Lint fix, making the exception more specific
+arp-speaker: drop logging the dropReason
+Update more tests (new argument to the parser)
+Address review comments
+post-review tweaks
+additional style compliance
+fixes comment
+Fix pylint errors
+Always treat binary op args as string literals
+add assertions for negative numbers
+D3D12: Fix swapchains after 921fb5e1cef
+Fix validation errors in Animometer's shader
+address comments
+fix glTFViewer (but we need clear ops to fix it completely)
+Added a test for UnmarshalManyPayload
+DRY the UnmarshalManyPayload implementation.
+Merge branch 'master' into aren55555/feature/expand-id-numeric-types
+Remove `Link` in favor of vanilla `map[string]interface{}`. More flexible for different allowed links spec implementations.
+Merge branch 'master' into keighl-master
+Fix IsCallable and IsEnum checking on 7.4.1875 and later
+Replace one-off s:StripTrailingSlash in rtp.vim with maktaba's version
+Fix callers that expected maktaba#path#Split to strip trailing slashes
+Fix typo in maktaba#path#Split vimdoc example
+Implement maktaba#log#GetFormattedEntries and support 1-arg handler
+hub, manager: share repros between managers via hub
+implement has size for Collection subject
+types: Add JSON tags to `SignedCertificateTimestamp`.
+trillian/ctfe: check setupAndRegister error
+Fix making liner happy
+x509: pass full issuer info into BuildPrecertTBS
+x509: parse the CT extended key usage
+Fix golang 1.11 compatibility on Windows
+Change precondition message
+Added tests: - entry.setValue(null)
+#2467: Custom map implementation for MapTestSuiteBuilderTests
+Code and test for Issue:ImmutableEnum{Set,Map} Collectors #2667
+Making the BloomFilter thread-safe & lock-free
+Update README.md to address pip problem on Goobuntu
+Package llvm-symbolizer with tool
+Relax security to epp path to finish integration testing.
+Update golden schema file (#36)
+Merge remote-tracking branch 'google/master'
+Fixed master build
+Merge remote-tracking branch 'origin/master'
+Do initial pass through module statements to enforce future import rules
+Removed PyPy factorial() implementation
+Add support for non-standard Python install in make. Error out when python version is not 2.7.x.
+Add 'closed defense' option to contest proposal
+Start adding common corruptions
+Reduce test length
+Debug mode
+Remove bad images
+WIP simple spatial
+Use new RandomSpatial attack
+Fix border frac
+feat: upgrade to Typescript 2.8.x
+fix: match Google internal tsconfig
+use require to conditionally load lint
+warn when clang-format fails
+make travis green
+fix broken commands
+libs/image: fix structure-packing pragma warning
+Default to Java 9 on Windows Kokoro
+Start looking for texture ids at 1, not 0
+Add tangents utility to fix #532.
+Merge branch 'master' into pr/vkmemalloc
+Add Cocoa & WebGL stubs for setPresentationTime
+Merge branch 'master' into presentation_time
+Add a concept of public APIs to Volley.
+add task to inline token strings in minifed lang files
+add grunt clean task
+Monkey patch pbkdf2.crypt.
+Basic /api/categories tests.
+Merge remote-tracking branch 'origin/master' into issue32_resttests
+Monkey patch pbkdf2.crypt.
+Fix logic in testing cookie expiration.
+remove debug statement
+fixed error_titles location
+Add support for a static invite key.  Fixes #137.
+Update readme formatting
+Changed _ to - for reducer command line options, and replaced --reduce-everywhere with opposite --preserve-semantics option.
+Revert small tweak.
+Document shader family results in file system
+More work on glsl-fuzz-walkthrough.md.
+Tweaks to glsl-reduce-walkthrough.md
+Work on glsl-fuzz-reduce.md
+Remove run_spv_local.sh which is now superseded by vkrun.py
+Brief intro to glsl-reduce.
+Changed _ to - for reducer command line options, and replaced --reduce-everywhere with opposite --preserve-semantics option.
+Rename token to worker
+Working on glsl-reduce command line example.
+Hyphenise generate-shader-family
+Hyphenise run-shader-family*
+Rename worker-vk to glsl-to-spv-worker
+Use gzip.DefaultCompression by default
+Incorporate @jonjohnsonjr feedback.
+Ignore digest mismatch for DockerHub
+[WIP] Start ripping bazel out
+tarball.LayerFromFile will return a v1.Layer backed by a tarball
+Implement ko/resolve
+v1.SHA256, v1.ParseConfigFile, v1.ParseManifest now take an io.Reader
+Log pushed digest to stderr
+Add a local mode to ko.
+Merge
+Added DPI TODO
+Add a note that text input and plugins are not supported
+header guards
+Rework macOS plugin API
+Initial Linux plugin refactor
+[linux] Adds raw key events plugin.
+Address review comments (documentation, alignment, constructor parameters)
+WIP
+WIP
+Fixup clear stencil value
+Merge branch 'master' into indices_buffer
+stuff
+Formatting fixes
+Format
+Fixes
+Add a fence_timeout option for VkScript.
+Use fopen_s on Windows to avoid security warning
+Fix formatting
+Set sudo:required to use VM with larger memory.
+Fix test buildscript version.
+Give more memory to gradle to run dex in process during android test
+Configure java heap size for predex
+Fix broken signature part
+Fix Java build
+Ignore InvalidPackage in lint due to okio
+avoid using nonstable releases of the android SDK
+Remove redundant elvis
+Test generated command strings instead of just length
+Stop flattening protoc command line.
+update android unit test configurations
+avoid using the new android SDK, since it requires some extra steps to accept the license
+avoid using nonstable releases of the android SDK
+`.` added as a valid character to parts of an artifact coordinate.
+[spirv] Combine <header> and <check> basic blocks into one
+Add a comment.
+minor ajustments
+Fix comments
+Fix comments
+Fixes.
+Improve documation style
+Try to kill all possible subprocesses in stop_standing_subprocess.
+Fix comments
+More checks for on_pass.
+Remove unused line
+Formatting seems correct and PASSes
+remove unnecessary dependencies
+Revert placement of runEither.
+Merge branch 'master' into aliases
+fix bad test
+Add a lens for internal "oneof" sum types.
+Add a Symbol newtype for more type-safety.
+Add support for http://hackage.haskell.org/package/discrimination
+Fix #13, streamline spaces in object destructuring
+Add DidBegin, DidEndOnExit and DidEnd events.
+Add cocoapods spec
+remove "OrNil"
+Fix the Rakefile rubocop and fix the path to swift file
+Updated CONTRIBUTING.md for passage on cheatsheet changes
+[RFC] Add reassembly package and accompanying reassemblydump example
+added more fields
+Adjusts
+merge branch master
+Properly split layers
+Cap memory usage for bidi example.
+New Close Tasks function, User attribute in Task, More robust Datastore filtering
+Merge remote-tracking branch 'upstream/master' into celery
+Clean up config
+Print topic name instead of object ref
+Delete turbiniactl.py
+Fixes #505
+Move wipeout functions to their own file
+Fixes #632. Add keyboard support for sign in/out
+start of impl for AuthServiceRegistry
+Make WorkerJobMetadata be a singleton and injected
+Merge fixes
+Merge branch 'master' into willard-dockerhub
+fix google photos
+Update TODO
+Corrected documentation for AuthServiceExtension
+review fix 1
+end with 2 new lines..
+review fix 1
+review fix 2
+Merge branch 'completion.sh-script-movement' of https://www.github.com/NikleshPhabiani/startup-os into completion.sh-script-movement
+Add source of completion.sh in commands.txt
+fix dependencies.yaml formatting and check_dependencies.sh
+Project import generated by Copybara.
+Add .gitignore file.
+Copy LICENSE file to the package sub-directories
+Merge branch 'master' into add_gitignore
+Merge branch 'master' into master
+Update style imports for general use
+Added optional weight patterns to the bar renderer, which control the ratio of the width of bars in a group.
+Fix panning bug where panning does not work if it is the first gesture unless tapping down and holding before panning.
+Add behavior to center the viewport on selected domain.
+Internal changes
+Internal clean up.
+Fix configuration change warning.
+Add new top level docs directory.
+Update Android Manifest configChanges attributes because of https://github.com/flutter/flutter/pull/15871
+Add function to force BoringSSL to process input.
+Support Java 6 Runtime
+some cleanup
+Updating comments to be more precise for isConscrypt methods
+Fetch the peer certificates if necessary when handshake completes.
+Strip binary on linux
+fixing build
+Fixing imports
+fixing bug in cpufeatures
+Importing more Android integration tests.
+Adding jmvArgs for 32/64 architecture.
+disabling 32bit build in appveyor
+hotfix-opensanscondensed: v1.111 added
+hotfix-mogra: v1.001 added
+comfortaa: v3.000 added
+hotfix-opensans: v1.101 added
+hotfix-opensans: v1.101 added
+Update DESCRIPTION.en_us.html
+sansita: v1.006 added
+updating TRIVIA.md
+poppins: v2.200 added.
+montserrat: v4.000 added
+removing deprecated napostrophe, IJ, IJacute
+overpass: v3.000 added
+nunitosans: v2.001 added.
+cormorante: v3.301 added
+fixing typo
+barlow family to v1.200 - major fixes
+neuton: Added v1.560. Sources at https://github.com/m4rc1e/Neuton
+neuton: fixed RFN in OFL, METADATA.pb and fonts
+Rubik: OFL: updated copyright string
+adding 02C9 to Latin Pro
+Detect concatenated profile and give clearer error message
+Recognize (again) https+insecure scheme for symbolization POSTs.
+feat: converting nanoseconds to seconds
+test: adding flamegraph tests
+Generate the flame graph data using existing graph.
+modify repeatableStringKind to actually handle multiple values
+Removed parenthesis around s.NumLabel[bytes]
+Construct bracketRx more cleanly
+feat: better cpu time conversion
+refactor: removing bootstrap dependency
+Applied fixes from latest review iteration
+call legacy profile memory allocations size, not byte
+Updated so units not modified when profile written out
+addressed comments
+Detailsbox opens on filename, refine menu is now disabled for all pages besides graph
+fix build script location
+[bad_example] Update build flags for reproducing bad instrumentation scenario.
+[infra] Temporary revert bad_build_check until most of the targets get fixed.
+[infra] Temporary revert bad_build_check until most of the targets get fixed.
+[bad_example] split bad/no instrumentation case into two different ones.
+Merge https://github.com/google/oss-fuzz
+Merge https://github.com/google/oss-fuzz
+Minor typo.
+Address review comments.
+[infra] Fix missing linking dependencies for coverage build (#1858).
+Multiprocess madness.
+Address review comments.
+Address more review comments, small refactoring.
+[docs] Add instructions on "pull_images" and "check_build" as per suggestion in #1330.
+Allow overriding dockerfile.
+Address review comments.
+WIP: download corpus in batches passed via args.
+[infra] Temporary revert bad_build_check until most of the targets get fixed.
+Work in progress, now able to test the build process.
+Put all libpng png files in seed corpus
+Build skia with swiftshader
+Add support for coverage builds
+Update OTS project
+minor find fix
+Update NSS project to use the build.sh and fuzzers provided by NSS
+WIP
+Address review comments and add FAQ entry.
+Update FAQ.md as per comments by Oliver.
+libvpx: Add project
+Some cleanup.
+Fix projects/wuffs build failure
+Rename bad_example_bad_instrumentation into bad_example_partial_instrumentation.
+Merge branch 'master' into rust_revert
+Calculate number of broken targets and fail if 10+% are broken.
+Workaround #2027
+adb.go: Search PATH and ANDROID_HOME
+gapis/api/gles: Temporary workaround for issue #1498
+add shader support for most uncompressed unscaled integer/float point format
+add srgb formats
+Add VK_EXT_debug_marker
+Fix type cast panic (bug #2190)
+Fix flaky TestSignalTryWait test.
+gapic: Don’t consider NaN and ∞ in tone mapping.
+Temporary fix for #474.
+Vulkan:Find color/depth attachments from LastUsedFramebuffer's RenderPass
+Add missing cgo dependency to fix #279.
+Vulkan: Fix `BasePipeline` value set in `vkCreate*Pipelines`
+Returns SubCommandRange for CmdIDGroup under SubCmdRoot.
+more import path fixes
+Name cmake template files appropriately
+gapii: Pass the path of libinterceptor down in the header.
+Fix the format problem for Vulkan Depth Attachment
+Move Reader and Writer from core/data/pod to core/data/binary.
+Add Slice type to box proto.
+Unify the filtering logic some more.
+gles: Add version AtLeast() helpers
+Don't maintain the atom selection across captures.
+Fix NewNodeIDFromRelativeBigInt
+CONIKS Hasher
+more test vectors
+Reviewer comments
+NewNodeIDFromRelativeBigInt fix
+Move NewGetOpts to storage where GetOpts is defined
+Ensure trees in mysql test have HashStrategy set
+Interface and noop implementation for Trillian quotas
+Fix tests
+review fix
+Allow servers to bind at user-specified addresses
+Sign SignedMapRoots
+Use SQL for reading subtrees
+examples/ct: drop getSCTForSignatureInput()
+storage: return existing leaves on QueueLeaves
+examples/ct: separate out building leaf and SCT
+storage: extra dup QueueLeaves test
+Reviewer comments
+nit
+Remove some dead code for encoding node ids
+Reviewer comments
+Added a test case for map entries key other than string (here, a byte enum).
+Remove /wd4512 from CMakeLists.txt
+Add flatbuffer_cc library support
+Use grpc_slice helper macros
+Update appveyor CI to run Python tests, save generated code as artifact
+Disable verification by default, but add helper method
+Remove unnecessary inline specifiers
+restored extra space
+Add basic gRPC docs
+Fix constexpr for older MSVC
+Revert previous attempt at VS10 fix
+Remove dep on unique_ptr
+fix bool customizations
+rearrange sample
+Tests
+rename because of -Werror=shadow
+TypeScript support
+Re-export support for unions
+Not overwriting generated js for tests
+Not returning null from struct contructors
+TypeScript support
+TS shell tests
+Issue #136
+fixes for custom allocator
+Fix compilation with VS 2013 missing header
+Reverted changes related to top-level list parsing
+Debianization with CPack
+Make flatbuffers work with ArduinoSTL (#4357)
+initial support for base code generator class
+fixed shadowing temp variable name for Travis
+idl_parser.cpp: replaced case insensitive search for $schema with case sensitive search
+Added CONTRIBUTING.md file.
+Port FlatBuffers to Go.
+Fixed rust snake case module naming issue (#4932)
+Implement cycleclock::Now for PNaCl
+Associate the required include directory with the benchmark library
+Make Benchmark a single header library (but not header-only)
+add myself to AUTHORS/CONTRIBUTORS
+remove ctor with default argument
+Add test to compare counter storage and access with std::map.
+ConsoleReporter: header printing should not be contingent on user counter names.
+Merge branch 'master' of https://github.com/google/benchmark
+user counters: add note to README on how counters are gathered across threads
+fix bad removal of BenchmarkCounters code during the merge
+update unit tests for user counters
+PR #262: More requested changes.
+Document all Counter::Flag members
+Merge branch 'master' of https://github.com/google/benchmark
+Revisit tests, more closely documents the current behavior.
+Rearrange #ifs from to handle specific cases first
+make ReportUnrecognizedArguments() print to stderr
+Added user counters, and move use of bytes_processed and items_processed to user counter logic.
+Merge branch 'master' of https://github.com/google/benchmark
+Remove unused (commented-out) code.
+Counter: Fix move ctor bug + change order of members.
+Merge branch 'master' of https://github.com/google/benchmark
+Fix old range syntax.
+Implemented request changes to PR #262.
+Merge branch 'master' of https://github.com/google/benchmark
+README: cleanup counter text.
+Complexity+Counters: fix counter flags which were being ignored.
+user counters: add note to README on how counters are gathered across threads
+Merge branch 'master' of https://github.com/biojppm/benchmark
+moving bytes_per_second and items_per_second to their old state
+CSVReporter now prints user counters too.
+VS2013 and lower: fix use of snprintf()
+Change timing internals
+remove max and min iteration options
+Fix #476. Explicit coersion of size_t to boolean
+Add benchmark_iterations option
+Update docs, and fix compiler warnings (why are they not an error for me, but an error in CI?)
+Rearrange #ifs from to handle specific cases first
+Associate the required include directory with the benchmark library
+Merge branch 'master' of https://github.com/google/benchmark
+Moved thread counters to ThreadStats.
+Merge branch 'master' of https://github.com/google/benchmark
+Counter: Fix move ctor bug + change order of members.
+VS2013: fix use of char[] as a member of std::pair<>.
+cxx03_test + counters: reuse the BM_empty() function.
+Add 32 bit release configurations
+Skip error for hw.cpufrequency on iOS
+moving bytes_per_second and items_per_second to their old state
+Fix printing of user counters in ConsoleReporter.
+Counter: Fix move ctor bug + change order of members.
+Merge branch 'master' of https://github.com/google/benchmark
+add contributor information
+update authors/contributors
+fix android compilation
+Revert "Use NEW settings for CMP0063 policy (#399)"
+Merge branch 'master' of https://github.com/google/benchmark
+benchmark_test: move counters test out of CXX11 preprocessor conditional.
+README: clarify cost of counter access modes.
+README: cleanup counter text.
+Fix reading CPU info from file
+Fix #342: DoNotOptimize causes compile errors on older GCC versions.
+Work around CMake configuration failure on Travis
+Merge branch 'master' of https://github.com/biojppm/benchmark
+use (auto-defined) BENCHMARK_HAS_CXX11 instead of BENCHMARK_INITLIST.
+Changed counters interface to map-like.
+Fix missing include of cstdio
+Minor white space and alignment fixes.
+cxx03_test + counters: reuse the BM_empty() function.
+user counters: add note to README on how counters are gathered across threads
+Implement cycleclock::Now for PNaCl
+Document that benchmark::Iterations should not be used to limit benchmark runtimes
+update authors/contributors
+Fix cmake file not to use CMAKE_SOURCE_DIR
+fix bad removal of BenchmarkCounters code during the merge
+Merge branch 'master' of https://github.com/google/benchmark
+fixture_test: fix gcc 4.6 compilation
+Counters access test: add accelerated lookup by name.
+Merge branch 'master' of https://github.com/google/benchmark
+Merge branch 'master' of https://github.com/google/benchmark
+Merge branch 'master' of https://github.com/google/benchmark
+Merge remote-tracking branch 'upstream/master'
+Add myself to AUTHORS and CONTRIBUTORS
+Try alternative formulation to placate GCC
+Work around CMake configuration failure on Travis
+Skip error for hw.cpufrequency on iOS
+Merge branch 'master' of https://github.com/google/benchmark
+use (auto-defined) BENCHMARK_HAS_CXX11 instead of BENCHMARK_INITLIST.
+Remove skipZeroCounters logic
+Merge branch 'master' of https://github.com/google/benchmark
+Document all Counter::Flag members
+cxx03_test + counters: reuse the BM_empty() function.
+user counters: add note to README on how counters are gathered across threads
+Merge branch 'master' of https://github.com/biojppm/benchmark
+update unit tests for user counters
+change counter storage to std::map
+Attempt to fix libc++ travis build w/ 32 bits
+CSVReporter now prints user counters too.
+Counter: use an inplace buffer for small names.
+Fix use of reserved names in Counter and BenchmarkCounters.
+Added user counters, and move use of bytes_processed and items_processed to user counter logic.
+console reporter dealing ok with user counters.
+Merge branch 'master' of https://github.com/google/benchmark
+Add test to compare counter storage and access with std::map.
+change counter storage to std::map
+PR #262: remove clang-format changes for preexisting code
+more clang tidy cleanups
+Google-style cleanups
+BENCHMARK_MAIN() now reports unrecognised command-line flags (see google/benchmark#320)
+add user counters to json reporter
+Merge branch 'master' of https://github.com/google/benchmark
+Expose counters from State.
+BenchmarkCounters: add option to not print zero counters (defaults to false).
+Minor white space and alignment fixes.
+Fix reading CPU info from file
+Attempt to fix travis configuration
+Skip error for hw.cpufrequency on iOS
+Implement ClobberMemory() and fix DoNotOptimize on MSVC.
+Expose counters from State.
+Update fixture_test to the new Fixture interface.
+Merge branch 'master' of https://github.com/google/benchmark
+Implement cycleclock::Now for PNaCl
+[tools] python 2/3 support
+checking __GLIBCXX__ and __GLIBCPP__ macro in addition to __ANDROID__
+using vsnprintf instead of std::vsnprintf to compile on Android
+add benchmark::ReportUnrecognizedArguments()
+Remove more references to macros.h
+update unit tests for user counters
+benchmark_test: move counters test out of CXX11 preprocessor conditional.
+change counter storage to std::map
+Merge branch 'master' of https://github.com/google/benchmark
+user counters: add note to README on how counters are gathered across threads
+reverted changes to cmake files which should have gone into later commits
+Moved thread counters to ThreadStats.
+change counter storage to std::map
+ConsoleReporter: header printing should not be contingent on user counter names.
+Minor white space and alignment fixes.
+Merge branch 'master' of https://github.com/google/benchmark
+rename BenchmarkCounters to the more appropriate UserCounters
+Add Benchmark::Iterations for explicitly specifying the number of iterations to use.
+Google-style cleanups
+[tools] python 2/3 support
+Fix internal_macros.h
+use (auto-defined) BENCHMARK_HAS_CXX11 instead of BENCHMARK_INITLIST.
+Moved thread counters to ThreadStats.
+Counter: fix VS2013 compilation error in char[] initialization.
+Changed counters interface to map-like.
+Merge branch 'master' of https://github.com/google/benchmark
+fixed loss of counter values
+Implement ClobberMemory() and fix DoNotOptimize on MSVC.
+CSVReporter now prints user counters too.
+remove ctor with default argument
+Fixture: remove tentative methods InitState() and TerminateState().
+Fix old range syntax.
+Add myself to AUTHORS and CONTRIBUTING
+Add generateInstanceName
+Add build dir include path
+Improve code style
+Move GenerateInstanceName in an own file
+Support Emscripten (Asm.js, WebAssembly)
+using vsnprintf instead of std::vsnprintf to compile on Android
+add benchmark::ReportUnrecognizedArguments()
+Remove more references to macros.h
+bytes_per_second and items_per_second are now in the UserCounters class
+Merge branch 'master' of https://github.com/google/benchmark
+Merge branch 'master' of https://github.com/google/benchmark
+Try alternative formulation to placate GCC
+Add BENCHMARK_BUILD_32_BITS option and add builders to test it
+Add 32 bit release configurations
+moving bytes_per_second and items_per_second to their old state
+Merge branch 'master' of https://github.com/google/benchmark
+Expose counters from State.
+Merge branch 'master' of https://github.com/google/benchmark
+Merge branch 'master' of https://github.com/google/benchmark
+Cleanup adjusted time calculations in reporters
+fix UB caused by unitialized value
+Work around GCC 4.6/4.7/4.8 bug
+Implement cycleclock::Now for PNaCl
+[tools] python 2/3 support
+Fix ThreadCPUUsage when running on RTEMS.
+Merge branch 'master' of https://github.com/biojppm/benchmark
+Moved thread counters to ThreadStats.
+Fixture: remove tentative methods InitState() and TerminateState().
+add gcc-multilib dependancy on travis
+use (auto-defined) BENCHMARK_HAS_CXX11 instead of BENCHMARK_INITLIST.
+Counters access test: add accelerated lookup by name.
+Avoid use of log2 which doesn't exist in Android GNU STL
+Merge remote-tracking branch 'upstream/master' into conformance
+Oops, forgot gofmt.
+fix compile errors on gcppubsub test
+remove useless As methods from mempubsub
+Merge branch 'master' into 657-as-methods
+foo
+Use mysql.NewConfig for correct defaults.
+Oops, forgot gofmt.
+Remove reference to service account in README
+Update tutorial with suggestions
+Merge branch 'master' into getting-started
+server/sdserver: add cleanup func for Stackdriver exporter
+Merge branch 'master' into refactor-state
+internal/contributebot: update regex so eg README and CODE_OF_CONDUCT are allowed package names
+Merge branch 'master' into rm-rds-options
+new contributing file
+Use t.Fatal instead of t.Error in a couple of places where doing otherwise could panic. Always delay when checking ModTime; filestore doesn't use --record and fails without it.
+Make sure to get a new *Bucket for each TestAttributes subtest.
+split some code out of a for loop
+Merge branch 'master' into 633-gcp-driver
+Merge branch 'master' into list
+Merge branch 'master' into list
+Merge branch 'master' into list
+Revert "Add helpful error message about jaeger."
+Expand documentation on required semantics for makeBucket.
+Parameterize path to blob/testdata.
+Use net.Dial instead of nc -z.
+Fix some fmt issues that made Travis fail
+Rename project field to projectID
+Clean up logging.
+Convert panic to log.Printf.
+Write a new README.md
+Update README.md
+Merge branch 'master' of github.com:google/go-cloud
+Merge branch 'master' into retry
+remove dependency on high-level GCP PubSub library
+remove one more use of escape hatch
+Merge branch 'master' into escapehatch
+Fix Travis to point to new checkpr.sh
+Split record/replay HTML into separate files per test case, instead of per-test.
+Merge branch 'master' into contribute-bot-design
+internal/contributebot/webhook: add App Engine listener
+internal/contributebot: add GKE deployment
+reviewer comments
+tweak conformance test
+Merge remote-tracking branch 'refs/remotes/origin/master' into ps-mem
+manage acking goroutines with a waitgroup on pubsub.Subscription.
+remove empty test
+split some code out of a for loop
+Merge branch 'master' into 633-gcp-driver
+add openTopic and openSubscription
+Merge branch 'master' into 740-gcp-pubsub-conformance
+add tests for nonexistent topics and subscriptions
+mempubsub: fail in driver methods on nonexistent topic
+use the full value of $DB_INSTANCE, not just the last component
+remove kubernetes section
+Fix path to tfstate file
+have terraform generate and output guestbook db password
+replace fmt.Sprintf with cfg.FormatDSN in OpenGAE
+Merge branch 'master' of https://github.com/google/go-cloud into 494gaesql
+go generate
+add cloudmysql_test.go
+wrap MySQL drivers with OpenCensus
+remove explicit trace spans.
+Merge branch 'master' into no-mysql-bindings
+postgres: add OpenCensus tracing
+pubsub: in-memory fake implementation
+removed example_test.go for now
+move client definitions out of retries
+Merge branch 'master' into guestbook
+runtimevar/runtimeconfigurator: separate gRPC dial from client construction (#53)
+split TestCanceled into two smaller tests
+Revert "replace sub field with a closure to add the msg to the ack batcher"
+Merge branch '639-conformance' of github.com:ijt/go-cloud into 639-conformance
+Add cloudmysql.OpenGAE
+Stop touching replay files if not recording
+small formatting changes
+Implement canceling test
+Add test to monitor a particular variable.
+Merge pull request #2 from google/master
+Add TODOs
+Add note about RequestLogger to server.New docs
+Clean up gRPC replay to be more similar to the HTTP replay.
+add a maxMessages arg to ReceiveBatch
+Merge branch '785-missing-ack' into 740-gcp-pubsub-conformance
+Merge branch 'master' into 740-gcp-pubsub-conformance
+remove existence checks from gcppubsub
+Move documentation to ListenAndServe
+Moved Add/Remove Repository functions to app_installation.
+Refactored function names.
+Renamed functions back to having Repository suffix.
+Removed merge conflict from adding my name to list.
+Ran go fmt on codebase.
+Pass TransferRequest as a value instead of as a pointer
+Removed mediaTypeMarketplacePreview
+Fixes #648 support preview Codes of Conduct API
+Added a test for DiffURL & PatchURL
+Fixed tests
+Merge remote-tracking branch 'upstream/master'
+Merge branch 'master' of https://github.com/varadarajana/go-github
+Added new fields to ListPendingOrgInvitations endpoint
+add doc string recommending use of GetRefs() #588
+Improved error messages for Outside Collaborators API
+Minor cleanup of code; minor improvements
+Add String methods and their tests for all new types
+Add unit tests for invalid cases
+Added Stubbed tests and switched MarketplaceService to use struct instead of service
+Re-added the line link to  documentation
+reverts all changes to contributing.md
+merges in changes to contributing.md from master
+#514: Modified to pointer time.Time in Invitation
+Merge branch 'master' of https://github.com/varadarajana/go-github
+Merge remote-tracking branch 'upstream/master'
+#569 : changed method name to IsBlocking
+Fixed tests to include new value
+Changed git_tags.go and git_tags_test.go
+better naming of arg for clarity
+oops - run gofmt
+Return nil explictly when there is no error code. Fixes #536
+Updates in comments and 'TestIssuesService_LockWithReason' test as requested in code review.
+Add DeliveryID function
+Rename "Href" to "HRef".
+Add support for integrations service
+Implements the GitHub Authorizations API per issue #119
+Add test for OAuth Authorizations API
+simplify string to string pointer
+style nit
+Moves the trafficOptions to the repos_traffic file
+Add support for the Repository Transfer API
+Added the misssing omitempty suffixes
+#514: added inviter to Invitation for orgs and teams invite
+#514 Added Org List Pending Invitations
+Add SubmitReview method to PullRequest service
+This adds an additional method to RepositoriesService to download a file
+Changed comment about requested reviewers to clarify multiple events, not multiple requests
+Revert repoID back to int64
+Updated CONTRIBUTING.md to describe new naming scheme.
+eliminate separate function to add GitHub preview mime type
+Adds the paths api
+Fixes a few PR comments
+Changed variable name for Repository.
+Removed colons from http put/delete paths.
+Removed unnecessary import and changed *github.ErrorResponse to *ErrorResponse.
+pulls: Support updating base branch
+Remove App Engine note about rewriting context import path.
+Assignment to payload in case of RepositoryVulnerabilityAlertEvent
+execute `go generate` for making necessory accessor methods.
+Fixing naming issue with mapping total_count from result #602
+Addressed comments in code review.
+updates docs to mark method as deprecated
+Bump the libraryVersion as this change involves a breaking API and also, update the docs to reflect the changes
+Git Signing API: Remove custom media type
+put new messages in order
+fix PR issues
+#514: multi word variable format
+Changed collaborators API to use parseBoolResponse().
+Add RepositoriesService method GetByID for fetching a repository by its numeric ID
+enables creation of a client with a custom enterprise url
+fixes typo in func name
+reorders and renames parameters
+check for err in tests
+#514 : removed Inviter struct
+#514: added inviter to Invitation for orgs and teams invite
+#530 : Fixed Consistency issues with GitHub docs #562
+Merge remote-tracking branch 'upstream/master' into Issue530
+fixed parsing number from jsonVariable
+Merge branch 'master' of https://github.com/google/tie into add_schema_Q15
+remove qustion 15 from app.html
+fix
+fix
+make som change
+fixed merge
+Merge branch 'master' into localStorage-setup
+fix the issue of display
+Solving linter and test issues for storing/retrieving codes
+Address review comments and refactor CodeStorageServiceSpec
+Address review comments
+clear local storage before and after each test case
+remove accidentally committed file SolutionHandlerService.js~
+Added three extra validation tests, two to check buggyOutputTests, and one to check uniqueness of titles. (#142)
+Fix #126: Add starter code/script for e2e test (#153)
+address Travis CI build
+Add feature to correctness test: support comparing list of strings (#183)
+Solving #155 Hook to run tests on current code before pushing (#184)
+Merge branch 'master' of https://github.com/google/tie into save-code-local-storage
+Add script to run end-to-end tests.
+Specify protractor environment for ESLint.
+fix bug #84
+Add to comments regarding reasoning behind standardizing stdout array.
+fix lint
+Determining passed tests using exit code
+linter fixes
+Address Codereview Comments
+Adding test cases
+Address review comments and refactor CodeStorageServiceSpec
+clear local storage before and after each test case
+Changed Task Schema Validation to use globalData.questions. (#198)
+1).Rename folder/files for e2e-tests. 2).Add utility function to check for console errors.
+Assembled test cases from first task to current and sent them out to server in one single request.
+Added Unit tests for SolutionHandlerServiceSpec; Update Sk version in ./karma.conf.js
+changed variable names according to code review.
+More modular script
+Replacing old karma config with new one for automatic testing
+Merge branch 'master' into hooks
+Added three extra validation tests, two to check buggyOutputTests, and one to check uniqueness of titles.
+fix the issue of display
+Replaced the tabs with spaces
+Save codes to localStorage and retrieve it.
+Address Codereview Comments
+Address review comments and refactor CodeStorageServiceSpec
+Adding test cases
+Address review comments
+get question IDs from keys of question dict. (#192)
+allow the correctness test to compare learner's output if the output is an array of strings
+Removed the CSS which was conflicting with the line number gutter
+Fix q4 description (#89)
+Address review comments
+Address code review comment
+Now safe for IE.
+Removed unnecessary constant-time check.
+Fixed some lost  whitespace.
+Save codes to localStorage and retrieve it.
+Merge branch 'master' of https://github.com/google/tie into save-code-local-storage
+Adding test cases
+Address review comments and add karma test
+address Travis CI build
+remove accidentally committed file SolutionHandlerService.js~
+Address Codereview Comments
+Fix #126: Add starter code/script for e2e test (#153)
+Changed Task Schema Validation to use globalData.questions. (#198)
+Merge branch 'save-code-local-storage' of https://github.com/google/tie into save-code-local-storage
+Fix comma error.
+Easy stuff for requested changes
+Linter errors
+function for modal
+Removed unnecessary code
+Merge branch 'master' into privacy-modal
+fix call to
+Add a modal component and its related methods
+Add tests and variable descriptions
+Fix #655: remove 'Reset Feedback' button.
+Merge branch 'master' into positive-reinf
+karma fixes
+linter fixes
+Initialized variables, added done() to jasmine async test
+Added tests, improved naming, created domain object for PrereqCheckErrors
+Added Unit tests for SolutionHandlerServiceSpec; Update Sk version in ./karma.conf.js
+Addressed reviewer comments.
+Fix #416 and part of #413: small textual changes.
+Pre-push hook script
+Update LearnerViewDirective.js
+remove extra comma to pass lint test.
+Save codes to localStorage and retrieve it.
+address review comments
+address review comments
+Removed the CSS which was conflicting with the line number gutter (#132)
+Fixed random text appearing when undo from default code (#143)
+address review comments
+Adding test cases
+Fix #189: Question Title UI Modifications (#201)
+Remove the cause of Travis failure.(Confirmed that console error will cause Travis failure.)
+Support match list of strings or of integers as output
+Enable auto indent.(#90)
+fix the issue of display
+Merge branch 'master' into fix-466
+Merge branch 'master' into localStorage-setup
+Linter errors
+scrollbars aligned. code terminal behaviour needs to be discussed
+Added option to push anyway in case tests fail
+Addressed reviewer comments.
+Solving linter and test issues for storing/retrieving codes
+address review comments
+Merge branch 'master' of https://github.com/google/tie into save-code-local-storage
+Merge branch 'master' of https://github.com/google/tie into save-code-local-storage
+Solving linter and test issues for storing/retrieving codes
+Makes changes for #98 based on the comments
+Refactor CodeStorageService to use hashKey so local storage is storing data as string -> string
+implement inputFunctionName feature for correctnessTest and buggyOutputTest (#185)
+implement inputFunctionName feature for correctnessTest and buggyOutputTest (#185)
+remove accidentally committed file SolutionHandlerService.js~
+Fix #194: rearranging in zoom in (#200)
+Fixed default code for q1
+Merge branch 'master' into fallback-redux
+Address review comments.
+Addressed reviewer comments.
+Changed Task Schema Validation to use globalData.questions.
+patch for PR#192.
+Run all the e2e-tests under tests folder.
+More modular script
+Merge branch 'save-code-local-storage' of https://github.com/google/tie into save-code-local-storage
+Merge branch 'master' of https://github.com/google/tie into save-code-local-storage
+Adding test cases
+Address review comments and refactor CodeStorageServiceSpec
+Make feedback page show the message starting from the beginning. fix #83 (#94)
+Enable auto indent (#90) (#103)
+Fixed random text appearing when undo from default code (#143)
+Fix #154: Show check mark instead of number when question is completed. (#168)
+Adding test cases
+Address review comments
+implement inputFunctionName feature for correctnessTest and buggyOutputTest (#185)
+Merge branch 'master' into inputfn
+Merge branch 'master' of https://github.com/google/tie
+Merge branch 'master' of https://github.com/google/tie into save-code-local-storage
+Makes changes for #98 based on the comments
+address review comments
+Adding test cases
+Address review comments and refactor CodeStorageServiceSpec
+address Travis CI build
+Fix q4 description (#89) (#110)
+Fix #126: Add starter code/script for e2e test (#153)
+Add lint rule for no-trailing-spaces. (#193)
+Add lint rule for no-trailing-spaces. (#193)
+Changed Task Schema Validation to use globalData.questions. (#198)
+Address UI review comments, change the order
+Pre-push hook script
+Added hook setup script
+Option to push even if test fails
+merge master
+moved the question title css to its alphabetically correct position
+Save codes to localStorage and retrieve it.
+Merge branch 'save-code-local-storage' of https://github.com/google/tie into save-code-local-storage
+Address review comments
+Address review comments
+Address review comments
+clear local storage before and after each test case
+Makes changes for #98 based on the comments
+Solving merge conflict
+Fix #154: Show check mark instead of number when question is completed. (#168)
+remove localhost config to try to fix the Travis error.
+Run all the e2e-tests under tests folder.
+Merge branch 'master' of https://github.com/google/tie into list_of_string_as_output To update with the master.
+Modified with fix for timing issue.
+Fix #31: always use spaces for initial line indentation.
+New karma config for auto testing
+Merge branch 'master' into hooks
+Merge branch 'master' of https://github.com/google/tie
+Solving linter and test issues for storing/retrieving codes
+Solving merge conflict
+Address review comments
+Address review comments and refactor CodeStorageServiceSpec
+address Travis CI build
+Refactor CodeStorageService to use hashKey so local storage is storing data as string -> string
+implement inputFunctionName feature for correctnessTest and buggyOutputTest (#185)
+Specify protractor environment for ESLint.
+implement inputFunctionName feature for correctnessTest and buggyOutputTest, fix CLA issue
+fix minor issues
+fix issues from code review comments
+Address issue #253.
+Wording fix.
+fix naming and createPalindrome method for odd input
+removed from string.js
+minor changes
+Save codes to localStorage and retrieve it.
+Address Codereview Comments
+Merge branch 'master' of https://github.com/google/tie into save-code-local-storage
+address review comments
+Merge branch 'master' of https://github.com/google/tie into save-code-local-storage
+Fix q4 description (#89) (#110)
+Makes changes for #98 based on the comments
+get question IDs from keys of question dict. (#192)
+Add feature to correctness test: support comparing list of strings (#183)
+patch for PR#192. (#196)
+Merge branch 'save-code-local-storage' of https://github.com/google/tie into save-code-local-storage
+Run all the e2e-tests under tests folder.
+Remove the cause of Travis failure.(Confirmed that console error will cause Travis failure.)
+Fixed random text appearing when undo from default code
+Add E2E test
+Merge remote-tracking branch 'origin/master' into alternate-layout
+Merge remote-tracking branch 'origin/master' into alternate-layout
+Removing file that should have been removed in mreger
+changed to syntaxErrorIsShown
+Fixing issues identified by linter.
+fixing merge conflict
+Addressing code review.
+Fixing linter issues.
+Fix increment.js lint problem
+Fix #278: clear syntax error messages when code is reset.
+new-default-feedback-initial
+new-default-feedback 6.4
+new-default-feedback 6.4a
+new-default-feedback 8.1a
+new-default-feedback 8.2a
+new-default-feedback 8.4a

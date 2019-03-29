@@ -1,8 +1,6 @@
-mv diff.test.txt   diff.test
-mv diff.train.txt  diff.train
-mv diff.valid.txt  diff.valid
-mv issu.test.txt   issu.test
-mv issu.valid.txt  issu.valid
-mv msg.test.txt    msg.test
-mv msg.train.txt   msg.train
-mv msg.valid.txt   msg.valid
+paste diff.train issu.train > diff_issu.train
+paste diff.test issu.test > diff_issu.test
+paste diff.valid issu.valid > diff_issu.valid
+paste issu.train diff.train > issu_diff.train
+paste issu.test diff.test > issu_diff.test
+paste issu.valid diff.valid > issu_diff.valid
